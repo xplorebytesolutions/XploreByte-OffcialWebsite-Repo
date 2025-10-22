@@ -7,39 +7,19 @@ import {
   ArrowRight,
   CheckCircle,
   Star,
-  MessageCircle,
   MessageSquare,
   Bot,
-  BarChart3,
-  Zap,
-  Shield,
   Users,
   Clock,
   Play,
   Phone,
-  Mail,
   Building2,
   TrendingUp,
-  Award,
-  Globe,
-  Smartphone,
-  Headphones,
   ShoppingCart,
   Rocket,
-  Target,
-  Heart,
-  ThumbsUp,
   ChevronRight,
   Sparkles,
-  Crown,
-  Gem,
-  Flame,
-  Timer,
   Gift,
-  Lock,
-  Eye,
-  Download,
-  Calendar,
   X,
   Settings,
   Link,
@@ -55,10 +35,9 @@ const LandingPage = () => {
   );
   const [isSalesModalOpen, setIsSalesModalOpen] = useState(false);
   const [showExitIntent, setShowExitIntent] = useState(false);
-  const [timeLeft, setTimeLeft] = useState(15 * 60); // 15 minutes in seconds
   const [currentSlide, setCurrentSlide] = useState(0);
-  const [modalCooldown, setModalCooldown] = useState(false);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
+  const [modalCooldown, setModalCooldown] = useState(false);
 
   // Carousel navigation functions
   const nextSlide = () => {
@@ -88,17 +67,6 @@ const LandingPage = () => {
     return timeSinceClose > fiveMinutes;
   };
 
-  // Countdown timer
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setTimeLeft(prev => {
-        if (prev <= 0) return 0;
-        return prev - 1;
-      });
-    }, 1000);
-    return () => clearInterval(timer);
-  }, []);
-
   // Exit intent detection
   useEffect(() => {
     const handleMouseLeave = (e: MouseEvent) => {
@@ -120,12 +88,6 @@ const LandingPage = () => {
 
     return () => clearInterval(interval);
   }, [isAutoPlaying]);
-
-  const formatTime = (seconds: number) => {
-    const mins = Math.floor(seconds / 60);
-    const secs = seconds % 60;
-    return `${mins}:${secs.toString().padStart(2, "0")}`;
-  };
 
   // Social proof data
   const testimonials = [
@@ -394,10 +356,10 @@ const LandingPage = () => {
 
               {/* Subheadline */}
               <p className="text-lg text-white/90 mb-8 leading-relaxed">
-                The modern customer doesn't want forms, buttons, or call queues.
-                They want to <em>talk</em>. Join 10,000+ businesses using
-                xByteChat to move from cold communication to warm conversation —
-                and that's where revenue lives.
+                The modern customer doesn&apos;t want forms, buttons, or call
+                queues. They want to <em>talk</em>. Join 10,000+ businesses
+                using xByteChat to move from cold communication to warm
+                conversation — and that&apos;s where revenue lives.
               </p>
 
               {/* Benefits List */}
@@ -1810,7 +1772,7 @@ const LandingPage = () => {
                   Real Results from Real Businesses
                 </h3>
                 <p className="text-xl text-gray-600">
-                  Here's what happens when you combine all these elements
+                  Here&apos;s what happens when you combine all these elements
                 </p>
               </div>
 
@@ -1846,9 +1808,9 @@ const LandingPage = () => {
 
               <div className="text-center mt-8">
                 <p className="text-lg text-gray-700 italic">
-                  "Those 110 buyers didn't appear by luck — they appeared
-                  because we understood their behavior through xByteChat's
-                  campaign analytics."
+                  &quot;Those 110 buyers didn&apos;t appear by luck — they
+                  appeared because we understood their behavior through
+                  xByteChat&apos;s campaign analytics.&quot;
                 </p>
                 <p className="text-sm text-gray-500 mt-2">
                   — Clothing Brand Case Study
@@ -2112,7 +2074,7 @@ const LandingPage = () => {
                   ))}
                 </div>
                 <blockquote className="text-[#333] mb-6 italic text-lg">
-                  "{testimonial.quote}"
+                  &quot;{testimonial.quote}&quot;
                 </blockquote>
                 <div>
                   <h4 className="font-semibold text-[#1E3A8A]">
@@ -2238,9 +2200,9 @@ const LandingPage = () => {
               </button>
               <div className="px-6 pb-4 text-[#333]">
                 The pricing can vary depending on the region, the country code
-                of a user and the type of conversation. For Indian Users, you'll
-                be charged ₹0.88/ Marketing message, & ₹0.125 for Utility/
-                Authentication messages.
+                of a user and the type of conversation. For Indian Users,
+                you&apos;ll be charged ₹0.88/ Marketing message, & ₹0.125 for
+                Utility/ Authentication messages.
               </div>
             </div>
 
@@ -2292,9 +2254,9 @@ const LandingPage = () => {
                 You must have a business website, facebook business manager
                 account and a fresh phone number not previously linked to any
                 WhatsApp account. If you want to apply for WhatsApp API on your
-                existing WhatsApp number, you can do this too but you'll either
-                need to delete your WhatsApp account or ask the XploreByte team
-                to onboard you on coexistence.
+                existing WhatsApp number, you can do this too but you&apos;ll
+                either need to delete your WhatsApp account or ask the
+                XploreByte team to onboard you on coexistence.
               </div>
             </div>
           </div>
@@ -3074,7 +3036,7 @@ const LandingPage = () => {
                 <Gift className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-2xl font-bold text-gray-900 mb-2">
-                Wait! Don't Miss Out
+                Wait! Don&apos;t Miss Out
               </h3>
               <p className="text-gray-600">
                 Get 50% OFF your first 3 months + Free Setup (Worth ₹4,500)
@@ -3091,7 +3053,7 @@ const LandingPage = () => {
                 onClick={handleModalClose}
                 className="w-full text-gray-500 hover:text-gray-700"
               >
-                No thanks, I'll pay full price
+                No thanks, I&apos;ll pay full price
               </button>
             </div>
           </motion.div>
@@ -3296,7 +3258,7 @@ const LandingPage = () => {
                                 <span className="text-gray-600">
                                   {" "}
                                   Announce promotions, product launches, and
-                                  special offers directly to customers'
+                                  special offers directly to customers&apos;
                                   most-used platform for instant engagement.
                                 </span>
                               </div>
