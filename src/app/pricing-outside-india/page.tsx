@@ -667,9 +667,9 @@ export default function PricingOutsideIndia() {
                 Countrywise WhatsApp Conversation Pricing
               </h2>
               <p className="text-lg text-gray-600 mb-8">
-                Messaging costs vary by your user&apos;s country. Check the exact
-                per-message charges for sending WhatsApp messages to users in
-                different regions.
+                Messaging costs vary by your user&apos;s country. Check the
+                exact per-message charges for sending WhatsApp messages to users
+                in different regions.
               </p>
               <a
                 href="/international-pricing"
@@ -689,8 +689,8 @@ export default function PricingOutsideIndia() {
                 Important Pricing Terminologies
               </h2>
               <p className="text-lg text-gray-600">
-                Let&apos;s make WhatsApp Conversational Pricing easy to understand
-                for you!
+                Let&apos;s make WhatsApp Conversational Pricing easy to
+                understand for you!
               </p>
             </div>
 

@@ -7,18 +7,15 @@ import {
   ArrowRight,
   CheckCircle,
   Star,
-  MessageSquare,
   Bot,
   Users,
   Clock,
   Play,
   Phone,
   Building2,
-  TrendingUp,
   ShoppingCart,
   Rocket,
   ChevronRight,
-  Sparkles,
   Gift,
   X,
   Settings,
@@ -233,110 +230,17 @@ const LandingPage = () => {
       {/* Hero Section */}
       <section
         id="home"
-        className="relative bg-gradient-to-br from-[#1E3A8A] via-[#10B981] to-[#06B6D4] text-white overflow-hidden pt-8"
+        className="relative bg-white text-gray-900 overflow-hidden pt-8"
         style={{ marginTop: 0 }}
       >
         {/* Background Elements */}
-        <div className="absolute inset-0">
-          {/* Deep Sapphire Blue elements */}
-          <div className="absolute top-20 right-20 w-32 h-32 bg-[#1E3A8A]/30 rounded-full blur-3xl"></div>
-          <div className="absolute top-40 left-10 w-24 h-24 bg-[#1E3A8A]/25 rounded-full blur-2xl"></div>
-
-          {/* Emerald Green elements */}
-          <div className="absolute bottom-20 left-20 w-40 h-40 bg-[#10B981]/25 rounded-full blur-3xl"></div>
-          <div className="absolute bottom-40 right-10 w-28 h-28 bg-[#10B981]/20 rounded-full blur-2xl"></div>
-
-          {/* Bright Cyan elements */}
-          <div className="absolute top-1/2 left-1/2 w-24 h-24 bg-[#06B6D4]/20 rounded-full blur-2xl transform -translate-x-1/2 -translate-y-1/2"></div>
-          <div className="absolute top-1/3 right-1/3 w-20 h-20 bg-[#06B6D4]/15 rounded-full blur-xl"></div>
-
-          {/* Silver Gray elements */}
-          <div className="absolute bottom-1/3 left-1/3 w-16 h-16 bg-gray-400/20 rounded-full blur-xl"></div>
-          <div className="absolute top-2/3 right-1/4 w-18 h-18 bg-gray-300/15 rounded-full blur-xl"></div>
-
-          {/* Cool White elements */}
-          <div className="absolute top-1/4 left-1/4 w-12 h-12 bg-white/10 rounded-full blur-lg"></div>
-          <div className="absolute bottom-1/4 right-1/4 w-14 h-14 bg-white/8 rounded-full blur-lg"></div>
+        <div className="absolute inset-0 pointer-events-none z-0">
+          <div className="absolute top-20 right-20 w-32 h-32 bg-[#11A944]/10 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-20 left-20 w-40 h-40 bg-[#1E3A8A]/10 rounded-full blur-3xl"></div>
+          <div className="absolute top-1/2 left-1/2 w-96 h-96 bg-gradient-to-r from-[#11A944]/5 to-[#1E3A8A]/5 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2"></div>
         </div>
 
-        {/* Vector Art Background Elements */}
-        <div className="absolute inset-0 overflow-hidden">
-          {/* WhatsApp Icons Pattern */}
-          <div className="absolute top-10 left-1/4 w-8 h-8 bg-[#10B981]/20 rounded-full flex items-center justify-center">
-            <MessageSquare className="w-4 h-4 text-[#10B981]/60" />
-          </div>
-          <div className="absolute top-32 right-1/3 w-6 h-6 bg-[#06B6D4]/20 rounded-full flex items-center justify-center">
-            <MessageSquare className="w-3 h-3 text-[#06B6D4]/60" />
-          </div>
-          <div className="absolute bottom-32 left-1/3 w-10 h-10 bg-[#1E3A8A]/20 rounded-full flex items-center justify-center">
-            <MessageSquare className="w-5 h-5 text-[#1E3A8A]/60" />
-          </div>
-          <div className="absolute bottom-10 right-1/4 w-7 h-7 bg-[#10B981]/20 rounded-full flex items-center justify-center">
-            <MessageSquare className="w-3.5 h-3.5 text-[#10B981]/60" />
-          </div>
-
-          {/* Circuit Board Lines */}
-          <svg
-            className="absolute inset-0 w-full h-full opacity-20"
-            viewBox="0 0 1200 800"
-          >
-            <defs>
-              <linearGradient
-                id="circuitGradient"
-                x1="0%"
-                y1="0%"
-                x2="100%"
-                y2="100%"
-              >
-                <stop offset="0%" stopColor="#1E3A8A" stopOpacity="0.3" />
-                <stop offset="50%" stopColor="#10B981" stopOpacity="0.2" />
-                <stop offset="100%" stopColor="#06B6D4" stopOpacity="0.3" />
-              </linearGradient>
-            </defs>
-            <path
-              d="M100,200 Q300,150 500,200 T900,200"
-              stroke="url(#circuitGradient)"
-              strokeWidth="2"
-              fill="none"
-              strokeDasharray="5,5"
-            />
-            <path
-              d="M200,400 Q400,350 600,400 T1000,400"
-              stroke="url(#circuitGradient)"
-              strokeWidth="2"
-              fill="none"
-              strokeDasharray="5,5"
-            />
-            <path
-              d="M50,600 Q250,550 450,600 T850,600"
-              stroke="url(#circuitGradient)"
-              strokeWidth="2"
-              fill="none"
-              strokeDasharray="5,5"
-            />
-            <path
-              d="M150,100 L150,300 M350,100 L350,300 M550,100 L550,300"
-              stroke="url(#circuitGradient)"
-              strokeWidth="1"
-              fill="none"
-            />
-          </svg>
-
-          {/* Floating Data Points */}
-          <div className="absolute top-1/4 right-1/4 w-3 h-3 bg-[#10B981]/40 rounded-full animate-pulse"></div>
-          <div
-            className="absolute top-3/4 left-1/4 w-2 h-2 bg-[#06B6D4]/40 rounded-full animate-pulse"
-            style={{ animationDelay: "1s" }}
-          ></div>
-          <div
-            className="absolute top-1/2 right-1/3 w-2.5 h-2.5 bg-[#1E3A8A]/40 rounded-full animate-pulse"
-            style={{ animationDelay: "2s" }}
-          ></div>
-          <div
-            className="absolute bottom-1/4 right-1/2 w-3 h-3 bg-[#10B981]/40 rounded-full animate-pulse"
-            style={{ animationDelay: "0.5s" }}
-          ></div>
-        </div>
+        {/* Vector Art Background Elements - Removed for white background */}
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -353,7 +257,7 @@ const LandingPage = () => {
               </h1>
 
               {/* Subheadline */}
-              <p className="text-lg text-white/90 mb-8 leading-relaxed">
+              <p className="text-lg text-gray-600 mb-8 leading-relaxed">
                 The modern customer doesn&apos;t want forms, buttons, or call
                 queues. They want to <em>talk</em>. Join 10,000+ businesses
                 using xByteChat to move from cold communication to warm
@@ -365,7 +269,7 @@ const LandingPage = () => {
                 {benefits.map((benefit, index) => (
                   <div key={index} className="flex items-center gap-3 mb-3">
                     <CheckCircle className="w-5 h-5 text-[#10B981] flex-shrink-0" />
-                    <span className="text-white/90">{benefit}</span>
+                    <span className="text-gray-700">{benefit}</span>
                   </div>
                 ))}
               </div>
@@ -403,11 +307,11 @@ const LandingPage = () => {
                       />
                     ))}
                   </div>
-                  <span className="text-sm font-semibold ml-2">
+                  <span className="text-sm font-semibold ml-2 text-gray-700">
                     4.9/5 (500+ reviews)
                   </span>
                 </div>
-                <div className="text-sm text-white/80">
+                <div className="text-sm text-gray-600">
                   ⚡ Setup in 5 minutes
                 </div>
               </div>
@@ -423,165 +327,23 @@ const LandingPage = () => {
               <div className="relative max-w-lg mx-auto">
                 <div className="relative">
                   <Image
-                    src="/landing-page/hero.png"
+                    src="/herosection.png"
                     alt="WhatsApp Business API Dashboard"
                     width={600}
                     height={400}
-                    className="w-full h-auto rounded-3xl"
-                    style={{
-                      backdropFilter: "blur(20px)",
-                      border: "2px solid rgba(255, 255, 255, 0.3)",
-                      boxShadow:
-                        "0 20px 40px rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 0 0 1px rgba(255, 255, 255, 0.1)",
-                      background:
-                        "linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05))",
-                    }}
+                    className="w-full h-auto"
                     priority
                   />
 
-                  {/* Background Glow Effect */}
-                  <div className="absolute inset-0 bg-gradient-to-r from-[#10B981]/20 via-[#06B6D4]/20 to-[#1E3A8A]/20 rounded-3xl blur-xl -z-10 scale-110"></div>
-
-                  {/* WhatsApp Icons Connected to Image */}
-                  <div
-                    className="absolute -top-6 -left-6 w-12 h-12 rounded-full flex items-center justify-center backdrop-blur-md"
-                    style={{
-                      background:
-                        "linear-gradient(135deg, rgba(16, 185, 129, 0.4), rgba(6, 182, 212, 0.3))",
-                      border: "1px solid rgba(255, 255, 255, 0.3)",
-                      boxShadow:
-                        "0 4px 16px rgba(16, 185, 129, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.2)",
-                    }}
-                  >
-                    <MessageSquare className="w-6 h-6 text-white" />
+                  {/* Background Decorative Elements */}
+                  <div className="absolute -z-10 inset-0">
+                    <div className="absolute top-1/4 -left-8 w-16 h-16 bg-[#11A944]/20 rounded-full blur-xl"></div>
+                    <div className="absolute bottom-1/4 -right-8 w-20 h-20 bg-[#1E3A8A]/20 rounded-full blur-xl"></div>
+                    <div className="absolute top-1/2 right-1/4 w-12 h-12 bg-yellow-400/20 rounded-full blur-lg"></div>
                   </div>
-                  <div
-                    className="absolute -top-4 -right-8 w-10 h-10 rounded-full flex items-center justify-center backdrop-blur-md"
-                    style={{
-                      background:
-                        "linear-gradient(135deg, rgba(6, 182, 212, 0.4), rgba(30, 58, 138, 0.3))",
-                      border: "1px solid rgba(255, 255, 255, 0.3)",
-                      boxShadow:
-                        "0 4px 16px rgba(6, 182, 212, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.2)",
-                    }}
-                  >
-                    <MessageSquare className="w-5 h-5 text-white" />
-                  </div>
-                  <div
-                    className="absolute -bottom-6 -left-4 w-8 h-8 rounded-full flex items-center justify-center backdrop-blur-md"
-                    style={{
-                      background:
-                        "linear-gradient(135deg, rgba(30, 58, 138, 0.4), rgba(16, 185, 129, 0.3))",
-                      border: "1px solid rgba(255, 255, 255, 0.3)",
-                      boxShadow:
-                        "0 4px 16px rgba(30, 58, 138, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.2)",
-                    }}
-                  >
-                    <MessageSquare className="w-4 h-4 text-white" />
-                  </div>
-                  <div
-                    className="absolute -bottom-4 -right-6 w-9 h-9 rounded-full flex items-center justify-center backdrop-blur-md"
-                    style={{
-                      background:
-                        "linear-gradient(135deg, rgba(16, 185, 129, 0.4), rgba(6, 182, 212, 0.3))",
-                      border: "1px solid rgba(255, 255, 255, 0.3)",
-                      boxShadow:
-                        "0 4px 16px rgba(16, 185, 129, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.2)",
-                    }}
-                  >
-                    <MessageSquare className="w-4 h-4 text-white" />
-                  </div>
-
-                  {/* Connection Lines */}
-                  <svg
-                    className="absolute inset-0 w-full h-full pointer-events-none"
-                    viewBox="0 0 600 400"
-                  >
-                    <defs>
-                      <linearGradient
-                        id="connectionGradient"
-                        x1="0%"
-                        y1="0%"
-                        x2="100%"
-                        y2="100%"
-                      >
-                        <stop
-                          offset="0%"
-                          stopColor="#10B981"
-                          stopOpacity="0.6"
-                        />
-                        <stop
-                          offset="100%"
-                          stopColor="#06B6D4"
-                          stopOpacity="0.6"
-                        />
-                      </linearGradient>
-                    </defs>
-                    <path
-                      d="M50,50 Q150,100 250,80 T450,60"
-                      stroke="url(#connectionGradient)"
-                      strokeWidth="2"
-                      fill="none"
-                      strokeDasharray="3,3"
-                      opacity="0.7"
-                    />
-                    <path
-                      d="M50,350 Q150,300 250,320 T450,340"
-                      stroke="url(#connectionGradient)"
-                      strokeWidth="2"
-                      fill="none"
-                      strokeDasharray="3,3"
-                      opacity="0.7"
-                    />
-                    <path
-                      d="M50,200 Q200,150 350,200 T550,180"
-                      stroke="url(#connectionGradient)"
-                      strokeWidth="1.5"
-                      fill="none"
-                      strokeDasharray="2,2"
-                      opacity="0.5"
-                    />
-                  </svg>
                 </div>
 
-                {/* Floating Elements */}
-                <motion.div
-                  className="absolute -top-4 -right-4 bg-gradient-to-r from-[#1E3A8A] to-[#10B981] text-white rounded-full px-4 py-2 shadow-lg"
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.5, delay: 1 }}
-                >
-                  <div className="flex items-center gap-2">
-                    <Sparkles className="w-4 h-4" />
-                    <span className="text-sm font-semibold">AI-Powered</span>
-                  </div>
-                </motion.div>
-
-                <motion.div
-                  className="absolute -bottom-4 -left-4 bg-gradient-to-r from-[#06B6D4] to-[#10B981] text-white rounded-lg px-4 py-2 shadow-lg"
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: 1.2 }}
-                >
-                  <div className="flex items-center gap-2">
-                    <TrendingUp className="w-4 h-4" />
-                    <span className="text-sm font-semibold">
-                      2x Sales Growth
-                    </span>
-                  </div>
-                </motion.div>
-
-                <motion.div
-                  className="absolute top-1/2 -right-8 bg-white/90 backdrop-blur-sm text-[#1E3A8A] rounded-lg px-3 py-2 shadow-lg"
-                  initial={{ opacity: 0, x: 20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.5, delay: 1.4 }}
-                >
-                  <div className="flex items-center gap-2">
-                    <div className="w-2 h-2 bg-[#10B981] rounded-full"></div>
-                    <span className="text-xs font-semibold">Live Demo</span>
-                  </div>
-                </motion.div>
+                {/* Floating elements removed for white background */}
               </div>
             </motion.div>
           </div>
