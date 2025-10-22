@@ -152,7 +152,7 @@ export default function CTAForm({
           </p>
           <div className="bg-[#11A944]/10 rounded-lg p-4">
             <p className="text-sm text-[#11A944] font-medium">
-              We'll send you a confirmation email shortly with next steps.
+              We&apos;ll send you a confirmation email shortly with next steps.
             </p>
           </div>
         </div>

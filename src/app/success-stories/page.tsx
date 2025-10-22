@@ -114,10 +114,10 @@ export default function SuccessStories() {
                       </div>
                     </div>
                     <blockquote className="text-gray-700 mb-6 italic">
-                      "XploreByte's WhatsApp automation transformed our customer
-                      service. We now handle 5x more inquiries with 90% faster
-                      response times. Our customer satisfaction increased from
-                      75% to 95% in just 3 months."
+                      &quot;XploreByte&apos;s WhatsApp automation transformed
+                      our customer service. We now handle 5x more inquiries with
+                      90% faster response times. Our customer satisfaction
+                      increased from 75% to 95% in just 3 months.&quot;
                     </blockquote>
                     <div className="flex items-center gap-2 mb-4">
                       <div className="flex">
@@ -185,10 +185,10 @@ export default function SuccessStories() {
                       </div>
                     </div>
                     <blockquote className="text-gray-700 mb-6 italic">
-                      "The appointment booking automation has been a
+                      &quot;The appointment booking automation has been a
                       game-changer. We reduced no-shows by 60% and our staff can
                       focus on patient care instead of scheduling. The ROI was
-                      evident within the first month."
+                      evident within the first month.&quot;
                     </blockquote>
                     <div className="flex items-center gap-2 mb-4">
                       <div className="flex">
@@ -256,10 +256,10 @@ export default function SuccessStories() {
                       </div>
                     </div>
                     <blockquote className="text-gray-700 mb-6 italic">
-                      "Our lead generation increased by 300% after implementing
-                      WhatsApp automation. The personalized follow-ups and
-                      instant property information sharing have revolutionized
-                      our sales process."
+                      &quot;Our lead generation increased by 300% after
+                      implementing WhatsApp automation. The personalized
+                      follow-ups and instant property information sharing have
+                      revolutionized our sales process.&quot;
                     </blockquote>
                     <div className="flex items-center gap-2 mb-4">
                       <div className="flex">
@@ -320,8 +320,8 @@ export default function SuccessStories() {
                 What Our Clients Say
               </h2>
               <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-                Don't just take our word for it. Here's what our clients have to
-                say about their experience.
+                Don&apos;t just take our word for it. Here&apos;s what our
+                clients have to say about their experience.
               </p>
             </div>
 
@@ -338,8 +338,8 @@ export default function SuccessStories() {
                   </div>
                 </div>
                 <blockquote className="text-gray-700 mb-4 italic">
-                  "The best investment we've made for our business. Customer
-                  engagement has never been this easy."
+                  &quot;The best investment we&apos;ve made for our business.
+                  Customer engagement has never been this easy.&quot;
                 </blockquote>
                 <div className="text-sm">
                   <p className="font-semibold text-gray-900">Alex Thompson</p>
@@ -359,8 +359,8 @@ export default function SuccessStories() {
                   </div>
                 </div>
                 <blockquote className="text-gray-700 mb-4 italic">
-                  "Incredible results in just 30 days. Our team productivity
-                  increased significantly."
+                  &quot;Incredible results in just 30 days. Our team
+                  productivity increased significantly.&quot;
                 </blockquote>
                 <div className="text-sm">
                   <p className="font-semibold text-gray-900">Maria Garcia</p>
@@ -380,8 +380,8 @@ export default function SuccessStories() {
                   </div>
                 </div>
                 <blockquote className="text-gray-700 mb-4 italic">
-                  "The automation features saved us hours every day. Highly
-                  recommended!"
+                  &quot;The automation features saved us hours every day. Highly
+                  recommended!&quot;
                 </blockquote>
                 <div className="text-sm">
                   <p className="font-semibold text-gray-900">David Kim</p>

@@ -327,8 +327,9 @@ export default function OmniInbox() {
                       </h3>
                       <p className="text-gray-600 leading-relaxed">
                         All your WhatsApp conversations in one unified
-                        dashboard, regardless of whether they're handled by bots
-                        or agents. Never lose track of customer interactions.
+                        dashboard, regardless of whether they&apos;re handled by
+                        bots or agents. Never lose track of customer
+                        interactions.
                       </p>
                     </div>
                   </div>

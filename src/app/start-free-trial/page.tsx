@@ -526,7 +526,7 @@ export default function StartFreeTrial() {
                       </select>
                       <p className="text-sm text-gray-600">
                         Any time you log in from an unusual device or location,
-                        we'll send an extra security code to your phone or
+                        we&apos;ll send an extra security code to your phone or
                         verify with your authenticator app that you can use to
                         login.
                       </p>
@@ -608,13 +608,13 @@ export default function StartFreeTrial() {
                   Account Created Successfully!
                 </h2>
                 <p className="text-gray-600 mb-6">
-                  Welcome to XploreByte! We've sent a verification email to your
-                  inbox. Please check your email and click the verification link
-                  to activate your account.
+                  Welcome to XploreByte! We&apos;ve sent a verification email to
+                  your inbox. Please check your email and click the verification
+                  link to activate your account.
                 </p>
                 <div className="bg-[#11A944]/10 border border-[#11A944]/20 rounded-lg p-4 mb-6">
                   <h3 className="font-semibold text-[#11A944] mb-2">
-                    What's Next?
+                    What&apos;s Next?
                   </h3>
                   <ul className="text-sm text-gray-600 space-y-1 text-left">
                     <li>• Check your email for verification link</li>

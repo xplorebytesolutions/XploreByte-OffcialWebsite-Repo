@@ -183,7 +183,9 @@ export default function BestPractices() {
                   <div className="w-12 h-12 bg-[#11A944] rounded-lg flex items-center justify-center">
                     <CheckCircle className="w-6 h-6 text-white" />
                   </div>
-                  <h3 className="text-2xl font-bold text-gray-900">Do&apos;s</h3>
+                  <h3 className="text-2xl font-bold text-gray-900">
+                    Do&apos;s
+                  </h3>
                 </div>
                 <ul className="space-y-4">
                   <li className="flex items-start gap-3">
@@ -230,7 +232,9 @@ export default function BestPractices() {
                   <div className="w-12 h-12 bg-[#EA1752] rounded-lg flex items-center justify-center">
                     <AlertTriangle className="w-6 h-6 text-white" />
                   </div>
-                  <h3 className="text-2xl font-bold text-gray-900">Don'ts</h3>
+                  <h3 className="text-2xl font-bold text-gray-900">
+                    Don&apos;ts
+                  </h3>
                 </div>
                 <ul className="space-y-4">
                   <li className="flex items-start gap-3">
@@ -257,8 +261,8 @@ export default function BestPractices() {
                   <li className="flex items-start gap-3">
                     <AlertTriangle className="w-5 h-5 text-[#EA1752] mt-1 flex-shrink-0" />
                     <span className="text-gray-700">
-                      <strong>Don&apos;t neglect compliance</strong> - Always follow
-                      WhatsApp policies and regulations
+                      <strong>Don&apos;t neglect compliance</strong> - Always
+                      follow WhatsApp policies and regulations
                     </span>
                   </li>
                   <li className="flex items-start gap-3">

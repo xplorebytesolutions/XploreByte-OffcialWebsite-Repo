@@ -87,7 +87,7 @@ export default function UserCommunity() {
                 Popular Discussions
               </h2>
               <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-                Join the conversation and learn from our community's best
+                Join the conversation and learn from our community&apos;s best
                 practices and experiences.
               </p>
             </div>

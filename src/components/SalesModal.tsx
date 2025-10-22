@@ -102,7 +102,8 @@ const SalesModal: React.FC<SalesModalProps> = ({ isOpen, onClose }) => {
                 <h2 className="text-3xl font-bold mb-4">Talk to Sales</h2>
                 <p className="text-white/90 text-lg leading-relaxed">
                   Our experts can help you find the right solution. Fill out the
-                  form and let's discuss how we can help your business grow.
+                  form and let&apos;s discuss how we can help your business
+                  grow.
                 </p>
               </div>
 
@@ -150,11 +151,11 @@ const SalesModal: React.FC<SalesModalProps> = ({ isOpen, onClose }) => {
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
                   <h3 className="text-2xl font-bold text-gray-900 mb-2">
-                    We're here to help!
+                    We&apos;re here to help!
                   </h3>
                   <p className="text-gray-600">
-                    Tell us about your business and we'll get back to you within
-                    24 hours.
+                    Tell us about your business and we&apos;ll get back to you
+                    within 24 hours.
                   </p>
                 </div>
 
@@ -427,8 +428,8 @@ const SalesModal: React.FC<SalesModalProps> = ({ isOpen, onClose }) => {
                   within 24 hours.
                 </p>
                 <p className="text-sm text-gray-500">
-                  We'll reach out to discuss your business needs and how we can
-                  help.
+                  We&apos;ll reach out to discuss your business needs and how we
+                  can help.
                 </p>
               </div>
             )}

@@ -292,9 +292,9 @@ export default function Travel() {
                 <div>
                   <h2 className="text-3xl font-bold mb-6">Success Story</h2>
                   <blockquote className="text-lg mb-6">
-                    "XploreByte's WhatsApp automation transformed our travel
-                    agency operations. We've seen a 70% increase in booking
-                    efficiency and 95% customer satisfaction."
+                    &quot;XploreByte&apos;s WhatsApp automation transformed our
+                    travel agency operations. We&apos;ve seen a 70% increase in
+                    booking efficiency and 95% customer satisfaction.&quot;
                   </blockquote>
                   <div className="flex items-center gap-4">
                     <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center">

@@ -27,7 +27,8 @@ export default function SupportCenter() {
                 <span className="text-[#11A944]">Help</span> Center
               </h1>
               <p className="text-xl text-white/80 max-w-3xl mx-auto mb-8">
-                Usage guides & tutorials. Find answers to your questions and learn how to get the most out of XploreByte.
+                Usage guides & tutorials. Find answers to your questions and
+                learn how to get the most out of XploreByte.
               </p>
               <div className="max-w-2xl mx-auto">
                 <div className="relative">
@@ -118,9 +119,13 @@ export default function SupportCenter() {
                       How to Set Up Your First Campaign
                     </h3>
                     <p className="text-gray-600 mb-4">
-                      A complete guide to creating and launching your first WhatsApp marketing campaign.
+                      A complete guide to creating and launching your first
+                      WhatsApp marketing campaign.
                     </p>
-                    <a href="#" className="text-[#11A944] font-medium hover:text-[#0d8a3a] transition-colors">
+                    <a
+                      href="#"
+                      className="text-[#11A944] font-medium hover:text-[#0d8a3a] transition-colors"
+                    >
                       Read Article →
                     </a>
                   </div>
@@ -137,9 +142,13 @@ export default function SupportCenter() {
                       Understanding Message Templates
                     </h3>
                     <p className="text-gray-600 mb-4">
-                      Learn about WhatsApp message templates and how to use them effectively.
+                      Learn about WhatsApp message templates and how to use them
+                      effectively.
                     </p>
-                    <a href="#" className="text-[#11A944] font-medium hover:text-[#0d8a3a] transition-colors">
+                    <a
+                      href="#"
+                      className="text-[#11A944] font-medium hover:text-[#0d8a3a] transition-colors"
+                    >
                       Read Article →
                     </a>
                   </div>
@@ -156,9 +165,13 @@ export default function SupportCenter() {
                       Best Practices for WhatsApp Marketing
                     </h3>
                     <p className="text-gray-600 mb-4">
-                      Essential tips and strategies to maximize your WhatsApp marketing success.
+                      Essential tips and strategies to maximize your WhatsApp
+                      marketing success.
                     </p>
-                    <a href="#" className="text-[#11A944] font-medium hover:text-[#0d8a3a] transition-colors">
+                    <a
+                      href="#"
+                      className="text-[#11A944] font-medium hover:text-[#0d8a3a] transition-colors"
+                    >
                       Read Article →
                     </a>
                   </div>
@@ -177,7 +190,10 @@ export default function SupportCenter() {
                     <p className="text-gray-600 mb-4">
                       Solutions to the most common problems you might encounter.
                     </p>
-                    <a href="#" className="text-[#11A944] font-medium hover:text-[#0d8a3a] transition-colors">
+                    <a
+                      href="#"
+                      className="text-[#11A944] font-medium hover:text-[#0d8a3a] transition-colors"
+                    >
                       Read Article →
                     </a>
                   </div>
@@ -194,7 +210,8 @@ export default function SupportCenter() {
               Still Need Help?
             </h2>
             <p className="text-lg text-white/80 mb-8">
-              Can't find what you're looking for? Our support team is here to help.
+              Can&apos;t find what you&apos;re looking for? Our support team is
+              here to help.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="inline-flex items-center px-8 py-3 bg-[#11A944] text-white font-semibold rounded-lg hover:bg-[#0d8a3a] transition-colors">

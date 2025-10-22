@@ -132,8 +132,8 @@ export default function Education() {
                   Parent Engagement
                 </h3>
                 <p className="text-gray-600 mb-4">
-                  Keep parents informed about their child's progress and school
-                  activities.
+                  Keep parents informed about their child&apos;s progress and
+                  school activities.
                 </p>
                 <ul className="space-y-2 text-sm text-gray-600">
                   <li>• Progress reports</li>
@@ -295,9 +295,9 @@ export default function Education() {
                 <div>
                   <h2 className="text-3xl font-bold mb-6">Success Story</h2>
                   <blockquote className="text-lg mb-6">
-                    "XploreByte's WhatsApp automation revolutionized our parent
-                    communication. We've achieved 90% parent engagement and 75%
-                    faster communication."
+                    &quot;XploreByte&apos;s WhatsApp automation revolutionized
+                    our parent communication. We&apos;ve achieved 90% parent
+                    engagement and 75% faster communication.&quot;
                   </blockquote>
                   <div className="flex items-center gap-4">
                     <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center">

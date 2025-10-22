@@ -390,19 +390,19 @@ export default function PricingOutsideIndia() {
       icon: <Megaphone className="w-6 h-6 text-purple-600" />,
       title: "Marketing messages",
       description:
-        "Promotional messages, offers, and product updates. WhatsApp charges separately based on the user's country.",
+        &quot;Promotional messages, offers, and product updates. WhatsApp charges separately based on the user&apos;s country.&quot;,
     },
     {
       icon: <ShoppingCart className="w-6 h-6 text-orange-600" />,
       title: "Utility messages",
       description:
-        "Transactional messages like delivery updates, receipts, and reminders. WhatsApp charges separately based on the user's country, but free if delivered within a customer service window.",
+        &quot;Transactional messages like delivery updates, receipts, and reminders. WhatsApp charges separately based on the user&apos;s country, but free if delivered within a customer service window.&quot;,
     },
     {
       icon: <Lock className="w-6 h-6 text-red-600" />,
       title: "Authentication messages",
       description:
-        "Messages for verification purposes (OTP, account registration, recovery). WhatsApp charges separately based on the user's country.",
+        &quot;Messages for verification purposes (OTP, account registration, recovery). WhatsApp charges separately based on the user&apos;s country.&quot;,
     },
     {
       icon: <HelpCircle className="w-6 h-6 text-indigo-600" />,
@@ -667,7 +667,7 @@ export default function PricingOutsideIndia() {
                 Countrywise WhatsApp Conversation Pricing
               </h2>
               <p className="text-lg text-gray-600 mb-8">
-                Messaging costs vary by your user's country. Check the exact
+                Messaging costs vary by your user&apos;s country. Check the exact
                 per-message charges for sending WhatsApp messages to users in
                 different regions.
               </p>
@@ -689,7 +689,7 @@ export default function PricingOutsideIndia() {
                 Important Pricing Terminologies
               </h2>
               <p className="text-lg text-gray-600">
-                Let's make WhatsApp Conversational Pricing easy to understand
+                Let&apos;s make WhatsApp Conversational Pricing easy to understand
                 for you!
               </p>
             </div>

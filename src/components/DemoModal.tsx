@@ -139,7 +139,7 @@ const DemoModal: React.FC<DemoModalProps> = ({ isOpen, onClose }) => {
               </div>
 
               <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4">
-                <h3 className="font-semibold mb-2">What You'll See:</h3>
+                <h3 className="font-semibold mb-2">What You&apos;ll See:</h3>
                 <ul className="text-sm text-white/90 space-y-1">
                   <li>• Live platform demonstration</li>
                   <li>• Your specific use cases</li>
@@ -156,11 +156,11 @@ const DemoModal: React.FC<DemoModalProps> = ({ isOpen, onClose }) => {
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
                   <h3 className="text-2xl font-bold text-gray-900 mb-2">
-                    Let's schedule your demo!
+                    Let&apos;s schedule your demo!
                   </h3>
                   <p className="text-gray-600">
-                    Tell us about your business and we'll customize the demo for
-                    you.
+                    Tell us about your business and we&apos;ll customize the
+                    demo for you.
                   </p>
                 </div>
 

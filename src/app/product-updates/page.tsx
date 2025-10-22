@@ -50,8 +50,8 @@ export default function ProductUpdates() {
                 Latest Updates
               </h2>
               <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-                Discover what's new in XploreByte and how it can improve your
-                WhatsApp marketing.
+                Discover what&apos;s new in XploreByte and how it can improve
+                your WhatsApp marketing.
               </p>
             </div>
 
@@ -75,10 +75,10 @@ export default function ProductUpdates() {
                       Advanced Analytics Dashboard
                     </h3>
                     <p className="text-gray-600 mb-4">
-                      We've launched a comprehensive analytics dashboard that
-                      provides deeper insights into your WhatsApp campaigns,
-                      including real-time metrics, conversion tracking, and
-                      performance analytics.
+                      We&apos;ve launched a comprehensive analytics dashboard
+                      that provides deeper insights into your WhatsApp
+                      campaigns, including real-time metrics, conversion
+                      tracking, and performance analytics.
                     </p>
                     <div className="flex items-center gap-4">
                       <a
@@ -179,11 +179,11 @@ export default function ProductUpdates() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                What's Coming Next
+                What&apos;s Coming Next
               </h2>
               <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-                Get a sneak peek at upcoming features and improvements we're
-                working on.
+                Get a sneak peek at upcoming features and improvements
+                we&apos;re working on.
               </p>
             </div>
 

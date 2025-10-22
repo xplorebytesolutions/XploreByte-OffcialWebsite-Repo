@@ -335,7 +335,7 @@ export default function InternationalPricing() {
   ];
 
   const filteredAndSortedData = useMemo(() => {
-    let filtered = pricingData.filter(item => {
+    const filtered = pricingData.filter(item => {
       const matchesSearch = item.market
         .toLowerCase()
         .includes(searchTerm.toLowerCase());
@@ -654,7 +654,9 @@ export default function InternationalPricing() {
                 <ul className="space-y-2 text-sm text-gray-600">
                   <li>• Individual countries with specific rates</li>
                   <li>• Regional groupings for broader coverage</li>
-                  <li>• "Rest of" categories for comprehensive coverage</li>
+                  <li>
+                    • &quot;Rest of&quot; categories for comprehensive coverage
+                  </li>
                   <li>• International authentication rates where applicable</li>
                 </ul>
               </div>

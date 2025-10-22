@@ -37,7 +37,7 @@ export default function DemoRequest() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                What You'll See in Your Demo
+                What You&apos;ll See in Your Demo
               </h2>
               <p className="text-lg text-gray-600 max-w-3xl mx-auto">
                 Our personalized demos show you exactly how our solutions can
@@ -186,8 +186,8 @@ export default function DemoRequest() {
                 What Our Clients Say
               </h2>
               <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-                Don't just take our word for it. Here's what our clients have to
-                say about their demo experience.
+                Don&apos;t just take our word for it. Here&apos;s what our
+                clients have to say about their demo experience.
               </p>
             </div>
 
@@ -204,9 +204,9 @@ export default function DemoRequest() {
                   </div>
                 </div>
                 <blockquote className="text-gray-700 mb-4 italic">
-                  "The demo was incredibly insightful. They showed us exactly
-                  how to automate our customer support and the results have been
-                  amazing."
+                  &quot;The demo was incredibly insightful. They showed us
+                  exactly how to automate our customer support and the results
+                  have been amazing.&quot;
                 </blockquote>
                 <div className="text-sm">
                   <p className="font-semibold text-gray-900">Sarah Johnson</p>
@@ -226,9 +226,9 @@ export default function DemoRequest() {
                   </div>
                 </div>
                 <blockquote className="text-gray-700 mb-4 italic">
-                  "The personalized demo helped us understand how to implement
-                  WhatsApp automation in our healthcare practice. Highly
-                  recommended!"
+                  &quot;The personalized demo helped us understand how to
+                  implement WhatsApp automation in our healthcare practice.
+                  Highly recommended!&quot;
                 </blockquote>
                 <div className="text-sm">
                   <p className="font-semibold text-gray-900">
@@ -250,8 +250,8 @@ export default function DemoRequest() {
                   </div>
                 </div>
                 <blockquote className="text-gray-700 mb-4 italic">
-                  "The demo exceeded our expectations. We saw immediate value
-                  and signed up right after the session."
+                  &quot;The demo exceeded our expectations. We saw immediate
+                  value and signed up right after the session.&quot;
                 </blockquote>
                 <div className="text-sm">
                   <p className="font-semibold text-gray-900">Lisa Rodriguez</p>

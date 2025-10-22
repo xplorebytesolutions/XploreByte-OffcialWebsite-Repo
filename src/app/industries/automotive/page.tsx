@@ -294,9 +294,9 @@ export default function Automotive() {
                 <div>
                   <h2 className="text-3xl font-bold mb-6">Success Story</h2>
                   <blockquote className="text-lg mb-6">
-                    "XploreByte's WhatsApp automation transformed our service
-                    center operations. We've seen a 40% increase in booking
-                    efficiency and 85% customer satisfaction rate."
+                    &quot;XploreByte&apos;s WhatsApp automation transformed our
+                    service center operations. We&apos;ve seen a 40% increase in
+                    booking efficiency and 85% customer satisfaction rate.&quot;
                   </blockquote>
                   <div className="flex items-center gap-4">
                     <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center">

@@ -177,7 +177,9 @@ export default function TermsOfService() {
                   </p>
                   <ul className="list-disc list-inside space-y-2 text-sm">
                     <li>Comply with all applicable laws and regulations</li>
-                    <li>Respect WhatsApp's terms of service and policies</li>
+                    <li>
+                      Respect WhatsApp&apos;s terms of service and policies
+                    </li>
                     <li>Not send spam or unsolicited messages</li>
                     <li>
                       Obtain proper consent before sending marketing messages

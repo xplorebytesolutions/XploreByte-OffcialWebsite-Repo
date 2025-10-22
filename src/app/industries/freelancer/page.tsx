@@ -290,9 +290,9 @@ export default function Freelancer() {
                 <div>
                   <h2 className="text-3xl font-bold mb-6">Success Story</h2>
                   <blockquote className="text-lg mb-6">
-                    "XploreByte's WhatsApp automation transformed my freelance
-                    business. I've saved 60% of my time and increased client
-                    satisfaction by 90%."
+                    &quot;XploreByte&apos;s WhatsApp automation transformed my
+                    freelance business. I&apos;ve saved 60% of my time and
+                    increased client satisfaction by 90%.&quot;
                   </blockquote>
                   <div className="flex items-center gap-4">
                     <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center">
