@@ -877,14 +877,11 @@
 "use client";
 import Header from "../components/Header";
 import Hero from "../components/Hero";
-
-import Services from "../components/Services";
-import WhyXploreByte from "../components/WhyXploreByte";
-import Testimonials from "../components/Testimonials";
+import HeroFeatureStrip from "../components/HeroFeatureStrip";
+import IndustriesGrid from "../components/whatsappBusiness/IndustriesGrid";
+import WhyWhatsAppSection from "../components/WhyWhatsAppSection";
 import Footer from "../components/Footer";
-import InnovationSection from "../components/InnovationSection";
 import StatsSection from "../components/StatsSection";
-import WhyChooseUsSection from "../components/WhyChooseUsSection";
 import CTASection from "../components/CTASection";
 
 // import DigitalSerenity from "../components/DigitalSerenity";
@@ -896,14 +893,12 @@ export default function Home() {
 
       <main className="hero-bg min-h-screen flex flex-col">
         <Hero />
-        <InnovationSection />
+        <HeroFeatureStrip />
+        <IndustriesGrid />
+        <WhyWhatsAppSection />
         <StatsSection />
-        <WhyChooseUsSection />
         <CTASection />
 
-        <Services />
-        <WhyXploreByte />
-        <Testimonials />
         {/* <DigitalSerenity /> */}
       </main>
       <Footer />

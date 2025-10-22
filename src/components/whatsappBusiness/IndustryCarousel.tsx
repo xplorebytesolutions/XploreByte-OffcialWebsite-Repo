@@ -16,84 +16,84 @@ const industries: IndustryCard[] = [
     description:
       "Empower beauty brands to engage and convert shoppers on WhatsApp with personalized catalogs, instant support, and seamless product discovery.",
     image: "/whatsapp-business/industry/industry-beauty.png",
-    ctaUrl: "#beauty",
+    ctaUrl: "/industries/beauty-cosmetics",
   },
   {
     title: "Health & Wellness",
     description:
       "Enhance patient experiences by enabling easy appointment scheduling, reminders, and health updates through WhatsApp automation.",
     image: "/whatsapp-business/industry/industry-health.png",
-    ctaUrl: "#health",
+    ctaUrl: "/industries/healthcare",
   },
   {
     title: "Home Decor & Furnishing",
     description:
       "Drive more sales and delight customers by sharing catalogs, confirming orders, and collecting feedback, all via WhatsApp conversations.",
     image: "/whatsapp-business/industry/industry-decor.png",
-    ctaUrl: "#decor",
+    ctaUrl: "/industries/real-estate",
   },
   {
     title: "Automotive Industry",
     description:
       "Streamline promotions, service bookings, and reminders—keeping customers informed and loyal through instant WhatsApp messaging.",
     image: "/whatsapp-business/industry/industry-automotive.png",
-    ctaUrl: "#automotive",
+    ctaUrl: "/industries/automotive",
   },
   {
     title: "Real Estate",
     description:
-      "Connect with property seekers instantly, share listings and documents, and schedule site visits—all within WhatsApp’s secure chat.",
+      "Connect with property seekers instantly, share listings and documents, and schedule site visits—all within WhatsApp's secure chat.",
     image: "/whatsapp-business/industry/industry-realestate.png",
-    ctaUrl: "#realestate",
+    ctaUrl: "/industries/real-estate",
   },
   {
     title: "Freelancer & Consultants",
     description:
       "Deliver a personal touch with automated responses, share service details, and nurture client relationships using WhatsApp for business.",
     image: "/whatsapp-business/industry/industry-freelancer.png",
-    ctaUrl: "#freelancer",
+    ctaUrl: "/industries/freelancer",
   },
   {
     title: "Travel & Tourism",
     description:
-      "Simplify trip bookings, itinerary updates, and customer inquiries with 24/7 WhatsApp support for every traveler’s journey.",
+      "Simplify trip bookings, itinerary updates, and customer inquiries with 24/7 WhatsApp support for every traveler's journey.",
     image: "/whatsapp-business/industry/industry-travel.png",
-    ctaUrl: "#travel",
+    ctaUrl: "/industries/travel",
   },
   {
     title: "Education",
     description:
       "Boost student engagement with real-time notifications, schedule updates, and support—all easily delivered through WhatsApp.",
     image: "/whatsapp-business/industry/industry-education.png",
-    ctaUrl: "#education",
+    ctaUrl: "/industries/education",
   },
   {
     title: "Spa & Salons",
     description:
       "Automate booking confirmations, payment links, and promotional offers to keep your clients coming back for more.",
     image: "/whatsapp-business/industry/industry-spa.png",
-    ctaUrl: "#spa",
+    ctaUrl: "/industries/spa",
   },
   {
     title: "E-commerce",
     description:
       "Increase conversions by sending order updates, product recommendations, and delivery alerts directly to your customers on WhatsApp.",
     image: "/whatsapp-business/industry/industry-ecommerce.png",
-    ctaUrl: "#ecommerce",
+    ctaUrl: "/industries/food",
   },
   {
     title: "Banking & Finance",
     description:
       "Build trust and improve customer retention with instant payment reminders, account updates, and secure service communication.",
     image: "/whatsapp-business/industry/industry-banking.png",
-    ctaUrl: "#banking",
+    ctaUrl: "/contact",
   },
   {
     title: "Restaurants & Food Businesses",
     description:
       "Speed up orders, share menu options, and accept payments seamlessly—giving every customer a delightful experience via WhatsApp.",
     image: "/whatsapp-business/industry/industry-food.png",
-    ctaUrl: "#food",
+    ctaUrl: "/industries/food",
   },
 ];
 

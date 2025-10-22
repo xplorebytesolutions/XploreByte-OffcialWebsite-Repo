@@ -1,6 +1,11 @@
-import React from "react";
+"use client";
+
+import React, { useState } from "react";
+import DemoModal from "./DemoModal";
 
 const CTASection = () => {
+  const [isDemoModalOpen, setIsDemoModalOpen] = useState(false);
+
   return (
     <section
       className="text-black bg-cover bg-center pt-24 pb-24"
@@ -20,7 +25,27 @@ const CTASection = () => {
             goals.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="inline-flex items-center px-8 py-4 rounded-lg font-medium transition-all duration-200 shadow-lg hover:shadow-xl font-sans bg-black text-emerald-400 hover:bg-gray-950">
+            <button className="inline-flex items-center px-8 py-4 rounded-lg font-medium transition-all duration-200 shadow-lg hover:shadow-xl font-sans bg-[#25D366] text-white hover:bg-[#1ea854]">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                className="lucide lucide-play w-5 h-5 mr-2"
+                viewBox="0 0 24 24"
+              >
+                <polygon points="5,3 19,12 5,21" />
+              </svg>
+              Try Now
+            </button>
+            <button
+              onClick={() => setIsDemoModalOpen(true)}
+              className="inline-flex items-center px-8 py-4 rounded-lg border-2 font-medium transition-all duration-200 font-sans border-[#25D366] text-[#25D366] hover:bg-[#25D366] hover:text-white"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
@@ -38,30 +63,17 @@ const CTASection = () => {
                 <rect width="18" height="18" x="3" y="4" rx="2" />
                 <path d="M3 10h18" />
               </svg>
-              Schedule a Consultation
-            </button>
-            <button className="inline-flex items-center px-8 py-4 rounded-lg border-2 font-medium transition-all duration-200 font-sans border-black text-black hover:bg-black hover:text-emerald-400">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                className="lucide lucide-download w-5 h-5 mr-2"
-                viewBox="0 0 24 24"
-              >
-                <path d="M12 15V3" />
-                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
-                <path d="m7 10 5 5 5-5" />
-              </svg>
-              Download Our Brochure
+              Book a Demo
             </button>
           </div>
         </div>
       </div>
+
+      {/* Demo Modal */}
+      <DemoModal
+        isOpen={isDemoModalOpen}
+        onClose={() => setIsDemoModalOpen(false)}
+      />
     </section>
   );
 };

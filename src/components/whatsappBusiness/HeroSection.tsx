@@ -1,8 +1,11 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import StarRating from "./StarRating";
+import DemoModal from "../DemoModal";
 
 const HeroSection: React.FC = () => {
+  const [isDemoModalOpen, setIsDemoModalOpen] = useState(false);
+
   return (
     <section className="relative py-20 bg-gradient-to-br from-emerald-500/10 via-purple-900/40 to-slate-950 text-white overflow-hidden">
       {/* Decorative gradient blobs */}
@@ -30,11 +33,17 @@ const HeroSection: React.FC = () => {
           <StarRating rating={4.9} count={182} />
           {/* Interactive CTA buttons */}
           <div className="flex flex-col sm:flex-row gap-4 mt-7">
-            <button className="bg-emerald-500 hover:bg-emerald-400 text-white px-7 py-3 rounded-xl font-bold shadow-xl text-lg transition">
-              Book a Free Demo
+            <button
+              onClick={() => setIsDemoModalOpen(true)}
+              className="bg-emerald-500 hover:bg-emerald-400 text-white px-7 py-3 rounded-xl font-bold shadow-xl text-lg transition"
+            >
+              Book a Demo
             </button>
-            <button className="bg-white text-emerald-600 hover:bg-gray-100 px-7 py-3 rounded-xl font-bold shadow-xl text-lg transition">
-              Try Live Demo
+            <button
+              onClick={() => setIsDemoModalOpen(true)}
+              className="bg-white text-emerald-600 hover:bg-gray-100 px-7 py-3 rounded-xl font-bold shadow-xl text-lg transition"
+            >
+              Book a Demo
             </button>
           </div>
         </div>
@@ -47,6 +56,12 @@ const HeroSection: React.FC = () => {
           />
         </div>
       </div>
+
+      {/* Demo Modal */}
+      <DemoModal
+        isOpen={isDemoModalOpen}
+        onClose={() => setIsDemoModalOpen(false)}
+      />
     </section>
   );
 };
