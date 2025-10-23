@@ -230,7 +230,7 @@ const LandingPage = () => {
       {/* Hero Section */}
       <section
         id="home"
-        className="relative bg-white text-gray-900 overflow-hidden pt-8"
+        className="relative bg-white text-gray-900 overflow-hidden pt-4"
         style={{ marginTop: 0 }}
       >
         {/* Background Elements */}
@@ -327,7 +327,7 @@ const LandingPage = () => {
               <div className="relative max-w-lg mx-auto">
                 <div className="relative">
                   <Image
-                    src="/herosection.png"
+                    src="/landing-page/hero_section.webp"
                     alt="WhatsApp Business API Dashboard"
                     width={600}
                     height={400}
@@ -1296,7 +1296,7 @@ const LandingPage = () => {
                 {/* Large Hero Image */}
                 <div className="relative h-80 overflow-hidden bg-gray-50">
                   <Image
-                    src="/landing-page/Click-to-WhatsApp-Ads.png"
+                    src="/landing-page/Click-to-WhatsApp-Ads.webp"
                     alt="Click to WhatsApp Ads - Mobile ad to chat flow"
                     fill
                     className="object-contain group-hover:scale-105 transition-transform duration-700"
@@ -1336,7 +1336,7 @@ const LandingPage = () => {
                 {/* Large Hero Image */}
                 <div className="relative h-80 overflow-hidden bg-gray-50">
                   <Image
-                    src="/landing-page/bluk-messaging.png"
+                    src="/landing-page/bluk-messaging.webp"
                     alt="Broadcast & Bulk Messages - Mass messaging interface"
                     fill
                     className="object-contain group-hover:scale-105 transition-transform duration-700"
@@ -1376,7 +1376,7 @@ const LandingPage = () => {
                 {/* Large Hero Image */}
                 <div className="relative h-80 overflow-hidden bg-gray-50">
                   <Image
-                    src="/landing-page/WhatsApp-Flows.png"
+                    src="/landing-page/WhatsApp-flows.webp"
                     alt="WhatsApp Flows - Interactive flow examples"
                     fill
                     className="object-contain group-hover:scale-105 transition-transform duration-700"
@@ -1416,7 +1416,7 @@ const LandingPage = () => {
                 {/* Large Hero Image */}
                 <div className="relative h-80 overflow-hidden bg-gray-50">
                   <Image
-                    src="/landing-page/catalog.png"
+                    src="/landing-page/catalog.webp"
                     alt="WhatsApp Catalog - Product catalog interface"
                     fill
                     className="object-contain group-hover:scale-105 transition-transform duration-700"
@@ -1456,7 +1456,7 @@ const LandingPage = () => {
                 {/* Large Hero Image */}
                 <div className="relative h-80 overflow-hidden bg-gray-50">
                   <Image
-                    src="/landing-page/noCodeChatbuilder.png"
+                    src="/landing-page/noCodeChatbuilder.webp"
                     alt="No-code Chatbot - Chatbot flow builder"
                     fill
                     className="object-contain group-hover:scale-105 transition-transform duration-700"
@@ -1496,7 +1496,7 @@ const LandingPage = () => {
                 {/* Large Hero Image */}
                 <div className="relative h-80 overflow-hidden bg-gray-50">
                   <Image
-                    src="/landing-page/analytics.png"
+                    src="/landing-page/analytics.webp"
                     alt="Analytics & Reporting - Performance tracking dashboard"
                     fill
                     className="object-contain group-hover:scale-105 transition-transform duration-700"
@@ -1652,7 +1652,7 @@ const LandingPage = () => {
                 <div className="rounded-2xl p-3 bg-gray-100 border border-gray-200 shadow-lg">
                   <div className="rounded-xl overflow-hidden w-full h-80">
                     <img
-                      src="/landing-page/roi.png"
+                      src="/landing-page/roi.webp"
                       alt="Boost Sales & Marketing ROI - ROI Dashboard"
                       className="w-full h-full object-cover"
                     />
@@ -1667,7 +1667,7 @@ const LandingPage = () => {
                 <div className="rounded-2xl p-3 bg-gray-100 border border-gray-200 shadow-lg w-full">
                   <div className="rounded-xl overflow-hidden w-full h-80">
                     <img
-                      src="/landing-page/support.png"
+                      src="/landing-page/support.webp"
                       alt="Deliver 24/7, World-Class Support - Support Dashboard"
                       className="w-full h-full object-cover"
                     />
@@ -1790,7 +1790,7 @@ const LandingPage = () => {
                 <div className="rounded-2xl p-3 bg-gray-100 border border-gray-200 shadow-lg w-full">
                   <div className="rounded-xl overflow-hidden w-full h-80">
                     <img
-                      src="/landing-page/automation.png"
+                      src="/landing-page/automation.webp"
                       alt="Automate & Scale Your Operations - Automation Dashboard"
                       className="w-full h-full object-cover"
                     />
@@ -2865,18 +2865,18 @@ const LandingPage = () => {
                   <Image
                     src={
                       (activeFeatureModal === "click-to-ads" &&
-                        "/landing-page/Click-to-WhatsApp-Ads.png") ||
+                        "/landing-page/Click-to-WhatsApp-Ads.webp") ||
                       (activeFeatureModal === "broadcast" &&
-                        "/landing-page/bluk-messaging.png") ||
+                        "/landing-page/bluk-messaging.webp") ||
                       (activeFeatureModal === "flows" &&
-                        "/landing-page/WhatsApp-Flows.png") ||
+                        "/landing-page/WhatsApp-flows.webp") ||
                       (activeFeatureModal === "catalog" &&
-                        "/landing-page/catalog.png") ||
+                        "/landing-page/catalog.webp") ||
                       (activeFeatureModal === "chatbot" &&
-                        "/landing-page/noCodeChatbuilder.png") ||
+                        "/landing-page/noCodeChatbuilder.webp") ||
                       (activeFeatureModal === "analytics" &&
-                        "/landing-page/analytics.png") ||
-                      "/landing-page/Click-to-WhatsApp-Ads.png"
+                        "/landing-page/analytics.webp") ||
+                      "/landing-page/Click-to-WhatsApp-Ads.webp"
                     }
                     alt={`${activeFeatureModal} feature`}
                     fill
