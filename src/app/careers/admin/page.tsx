@@ -76,7 +76,9 @@ const mockApplications = [
   },
 ];
 
-const statusColors = {
+type ApplicationStatus = "pending" | "reviewed" | "interviewed" | "rejected" | "hired";
+
+const statusColors: Record<ApplicationStatus, string> = {
   pending: "bg-yellow-100 text-yellow-800",
   reviewed: "bg-blue-100 text-blue-800",
   interviewed: "bg-purple-100 text-purple-800",
@@ -269,7 +271,7 @@ export default function ApplicationsAdmin() {
                       <td className="px-6 py-4 whitespace-nowrap">
                         <span
                           className={`inline-flex px-2 py-1 text-xs font-semibold rounded-full ${
-                            statusColors[application.status]
+                            statusColors[application.status as ApplicationStatus]
                           }`}
                         >
                           {application.status.charAt(0).toUpperCase() +
