@@ -93,7 +93,9 @@ export default function ApplicationsAdmin() {
   const [searchTerm, setSearchTerm] = useState("");
   const [statusFilter, setStatusFilter] = useState("all");
   const [jobFilter, setJobFilter] = useState("all");
-  const [selectedApplication, setSelectedApplication] = useState(null);
+  const [selectedApplication, setSelectedApplication] = useState<
+    (typeof mockApplications)[number] | null
+  >(null);
 
   const jobTitles = [...new Set(applications.map(app => app.jobTitle))];
 
