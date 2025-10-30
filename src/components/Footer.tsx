@@ -81,7 +81,7 @@ const Footer = () => {
                 </span>
               </span>
             </div>
-            <p className="max-w-md font-sans text-gray-300 text-base leading-relaxed">
+            <p className="max-w-md font-sans text-gray-300 text-sm leading-normal">
               Your trusted partner in digital innovation—empowering your growth
               with next-gen technology, strategy, and talent.
             </p>
@@ -89,8 +89,8 @@ const Footer = () => {
 
           {/* Legal */}
           <div>
-            <h3 className="font-medium text-white mb-6">Legal</h3>
-            <ul className="space-y-3 text-gray-300 text-base">
+            <h3 className="text-white/90 text-sm font-semibold uppercase tracking-wide mb-4">Legal</h3>
+            <ul className="space-y-2 text-gray-300 text-sm">
               <li>
                 <a
                   href="/terms-of-service"
@@ -120,8 +120,8 @@ const Footer = () => {
 
           {/* Company */}
           <div>
-            <h3 className="font-medium text-white mb-6">Company</h3>
-            <ul className="space-y-3 text-gray-300 text-base">
+            <h3 className="text-white/90 text-sm font-semibold uppercase tracking-wide mb-4">Company</h3>
+            <ul className="space-y-2 text-gray-300 text-sm">
               <li>
                 <a
                   href="/about-us"
@@ -159,8 +159,8 @@ const Footer = () => {
 
           {/* Contact Information */}
           <div>
-            <h3 className="font-medium text-white mb-6">Contact</h3>
-            <div className="space-y-4 text-gray-300 text-base">
+            <h3 className="text-white/90 text-sm font-semibold uppercase tracking-wide mb-4">Contact</h3>
+            <div className="space-y-3 text-gray-300 text-sm">
               <div className="flex items-start space-x-3">
                 <svg
                   className="w-5 h-5 text-emerald-400 mt-0.5 flex-shrink-0"
@@ -176,12 +176,12 @@ const Footer = () => {
                   />
                 </svg>
                 <div>
-                  <p className="font-medium text-white">Email</p>
+                  <p className="font-medium text-white text-sm">Email</p>
                   <a
-                    href="mailto:hello@xplorebyte.com"
+                    href="mailto:support@xplorebyte.com"
                     className="hover:text-emerald-400 transition-colors duration-300"
                   >
-                    hello@xplorebyte.com
+                    support@xplorebyte.com
                   </a>
                 </div>
               </div>
@@ -200,7 +200,7 @@ const Footer = () => {
                   />
                 </svg>
                 <div>
-                  <p className="font-medium text-white">Phone</p>
+                  <p className="font-medium text-white text-sm">Phone</p>
                   <a
                     href="tel:+918826165727"
                     className="hover:text-emerald-400 transition-colors duration-300"
