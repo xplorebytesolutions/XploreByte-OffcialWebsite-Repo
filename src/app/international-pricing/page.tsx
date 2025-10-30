@@ -414,7 +414,7 @@ export default function InternationalPricing() {
 
       return (aNum - bNum) * (sortDirection === "asc" ? 1 : -1);
     });
-  }, [searchTerm, sortField, sortDirection, filterRegion]);
+  }, [searchTerm, sortField, sortDirection, filterRegion, pricingData]);
 
   const handleSort = (field: keyof PricingData) => {
     if (sortField === field) {

@@ -158,7 +158,7 @@ export default function JobApplication() {
 
     try {
       // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 2000));
+      await new Promise<void>(resolve => setTimeout(resolve, 2000));
 
       // Here you would typically send the data to your backend
       console.log("Application submitted:", { formData, cvFile });

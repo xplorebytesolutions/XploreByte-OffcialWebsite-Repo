@@ -150,7 +150,7 @@ const perks = [
 
 export default function Careers() {
   const [isDemoModalOpen, setIsDemoModalOpen] = useState(false);
-  const [selectedJob, setSelectedJob] = useState(null);
+  const [selectedJob, setSelectedJob] = useState<number | null>(null);
 
   return (
     <>
