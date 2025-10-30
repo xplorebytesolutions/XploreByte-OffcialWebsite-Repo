@@ -119,7 +119,7 @@ export default function ApplicationsAdmin() {
     setFilteredApplications(filtered);
   }, [searchTerm, statusFilter, jobFilter, applications]);
 
-  const updateApplicationStatus = (id, newStatus) => {
+  const updateApplicationStatus = (id: number, newStatus: string) => {
     setApplications(prev =>
       prev.map(app => (app.id === id ? { ...app, status: newStatus } : app))
     );
