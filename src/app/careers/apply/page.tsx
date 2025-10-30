@@ -65,8 +65,8 @@ export default function JobApplication() {
 
   const [cvFile, setCvFile] = useState(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState(null); // 'success', 'error', null
-  const [errors, setErrors] = useState({});
+  const [submitStatus, setSubmitStatus] = useState<"success" | "error" | null>(null);
+  const [errors, setErrors] = useState<Record<string, string>>({});
 
   const selectedJob =
     jobPositions.find(job => job.id.toString() === jobId) || jobPositions[0];
