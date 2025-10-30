@@ -71,7 +71,9 @@ export default function JobApplication() {
   const selectedJob =
     jobPositions.find(job => job.id.toString() === jobId) || jobPositions[0];
 
-  const handleInputChange = e => {
+  const handleInputChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
+  ) => {
     const { name, value } = e.target;
     setFormData(prev => ({
       ...prev,
@@ -87,7 +89,7 @@ export default function JobApplication() {
     }
   };
 
-  const handleFileChange = e => {
+  const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files[0];
     if (file) {
       // Validate file type
