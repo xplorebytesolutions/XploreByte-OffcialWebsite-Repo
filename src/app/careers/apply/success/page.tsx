@@ -25,7 +25,7 @@ export default function ApplicationSuccess() {
               Application Submitted Successfully!
             </h1>
             <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-              Thank you for your interest in joining XploreByte. We've received
+              Thank you for your interest in joining XploreByte. We&#39;ve received
               your application and will review it carefully.
             </p>
 
@@ -64,7 +64,7 @@ export default function ApplicationSuccess() {
                       Initial Screening
                     </h3>
                     <p className="text-gray-600">
-                      If your profile matches our requirements, we'll contact
+                      If your profile matches our requirements, we&#39;ll contact
                       you for an initial phone screening.
                     </p>
                   </div>
@@ -98,8 +98,8 @@ export default function ApplicationSuccess() {
                       Final Decision
                     </h3>
                     <p className="text-gray-600">
-                      We'll notify you of our decision and discuss next steps if
-                      you're selected.
+                      We&#39;ll notify you of our decision and discuss next steps if
+                      you&#39;re selected.
                     </p>
                   </div>
                 </div>

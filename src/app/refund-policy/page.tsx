@@ -112,7 +112,7 @@ export default function RefundPolicy() {
                 </h2>
                 <p className="text-gray-700 leading-relaxed text-base">
                   Following the free trial, if a user subscribes to any of
-                  XploreByte's paid services, they are ineligible to receive a
+                  XploreByte&#39;s paid services, they are ineligible to receive a
                   refund. The FREE trial is provided to ensure that the users
                   try out all the services and decide whether to continue with
                   the XploreByte platform. If the user feels unsatisfied, they
@@ -162,8 +162,8 @@ export default function RefundPolicy() {
                 <p className="text-gray-700 leading-relaxed text-base">
                   If a user experiences continuous technical issues that prevent
                   them from using the service effectively, and if these issues
-                  are verified by XploreByte's support team, a partial or full
-                  refund may be granted at XploreByte's discretion.
+                  are verified by XploreByte&#39;s support team, a partial or full
+                  refund may be granted at XploreByte&#39;s discretion.
                 </p>
               </div>
 
@@ -224,7 +224,7 @@ export default function RefundPolicy() {
                 </h2>
                 <p className="text-gray-700 leading-relaxed text-base">
                   For any refund-related queries, users are encouraged to
-                  contact XploreByte's customer support team, which is committed
+                  contact XploreByte&#39;s customer support team, which is committed
                   to providing efficient and personalized assistance.
                 </p>
               </div>

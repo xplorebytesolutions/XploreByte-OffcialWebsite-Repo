@@ -165,7 +165,7 @@ export default function Careers() {
                 Join Our <span className="text-[#11A944]">Team</span>
               </h1>
               <p className="text-xl text-white/80 max-w-3xl mx-auto mb-8">
-                Be part of a dynamic team that's revolutionizing business
+                Be part of a dynamic team that&#39;s revolutionizing business
                 communication with cutting-edge WhatsApp Business solutions.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -202,7 +202,7 @@ export default function Careers() {
                 Why Work at XploreByte?
               </h2>
               <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-                We're not just building software—we're creating the future of
+                We&#39;re not just building software—we&#39;re creating the future of
                 business communication.
               </p>
             </div>
@@ -418,8 +418,8 @@ export default function Careers() {
               Ready to Join Our Team?
             </h2>
             <p className="text-lg text-gray-600 mb-8">
-              Don't see a position that matches your skills? We're always
-              looking for talented individuals. Send us your resume and let's
+              Don&#39;t see a position that matches your skills? We&#39;re always
+              looking for talented individuals. Send us your resume and let&#39;s
               start a conversation.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

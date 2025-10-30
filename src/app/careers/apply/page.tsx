@@ -4,20 +4,7 @@ import { useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import Header from "../../../components/Header";
 import Footer from "../../../components/Footer";
-import {
-  ArrowLeft,
-  Upload,
-  FileText,
-  User,
-  Mail,
-  Phone,
-  MapPin,
-  Briefcase,
-  Calendar,
-  CheckCircle,
-  AlertCircle,
-  X,
-} from "lucide-react";
+import { ArrowLeft, Upload, FileText, User, Briefcase, Calendar, CheckCircle, AlertCircle, X } from "lucide-react";
 
 const jobPositions = [
   {
@@ -613,7 +600,7 @@ export default function JobApplication() {
                     onChange={handleInputChange}
                     rows={6}
                     className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#11A944] focus:border-transparent"
-                    placeholder="Tell us why you're interested in this position and what makes you a great fit..."
+                    placeholder="Tell us why you&#39;re interested in this position and what makes you a great fit..."
                   />
                 </div>
               </div>
