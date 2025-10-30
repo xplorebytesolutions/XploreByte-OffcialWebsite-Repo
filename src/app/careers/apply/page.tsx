@@ -90,7 +90,11 @@ export default function JobApplication() {
   };
 
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const file = e.target.files[0];
+    const files = e.target.files;
+    if (!files || files.length === 0) {
+      return;
+    }
+    const file = files[0];
     if (file) {
       // Validate file type
       const allowedTypes = [
