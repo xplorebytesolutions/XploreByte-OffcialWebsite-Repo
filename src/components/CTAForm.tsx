@@ -12,6 +12,7 @@ import {
   Calendar,
   Clock,
 } from "lucide-react";
+import { submitLead } from "../lib/leadClient";
 
 interface CTAFormProps {
   title?: string;
@@ -47,6 +48,7 @@ export default function CTAForm({
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [errors, setErrors] = useState<Record<string, string>>({});
+  const [submitError, setSubmitError] = useState<string | null>(null);
 
   const handleInputChange = (
     e: React.ChangeEvent<
@@ -105,10 +107,21 @@ export default function CTAForm({
     }
 
     setIsSubmitting(true);
+    setSubmitError(null);
 
     try {
-      // Simulate form submission
-      await new Promise<void>(resolve => setTimeout(resolve, 2000));
+      await submitLead({
+        kind: "demo_request",
+        firstName: formData.firstName,
+        lastName: formData.lastName,
+        email: formData.email,
+        phone: formData.phone || undefined,
+        company: formData.company || undefined,
+        industry: formData.industry || undefined,
+        message: formData.message || undefined,
+        preferredDate: formData.preferredDate || undefined,
+        preferredTime: formData.preferredTime || undefined,
+      });
 
       setIsSubmitting(false);
       setIsSubmitted(true);
@@ -130,7 +143,12 @@ export default function CTAForm({
       }, 3000);
     } catch (error) {
       setIsSubmitting(false);
-      console.error("Form submission error:", error);
+      const message =
+        error instanceof Error
+          ? error.message
+          : "Failed to submit. Please try again.";
+      setSubmitError(message);
+      console.error("Lead submission error:", error);
     }
   };
 
@@ -430,6 +448,12 @@ export default function CTAForm({
                 placeholder="Describe your business needs and how we can help..."
               />
             </div>
+          </div>
+        )}
+
+        {submitError && (
+          <div className="rounded-lg border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-700">
+            {submitError}
           </div>
         )}
 

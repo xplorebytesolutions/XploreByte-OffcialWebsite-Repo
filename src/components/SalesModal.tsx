@@ -10,6 +10,7 @@ import {
   User,
   MessageSquare,
 } from "lucide-react";
+import { submitLead } from "../lib/leadClient";
 
 interface SalesModalProps {
   isOpen: boolean;
@@ -32,6 +33,7 @@ const SalesModal: React.FC<SalesModalProps> = ({ isOpen, onClose }) => {
 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [submitError, setSubmitError] = useState<string | null>(null);
 
   const handleInputChange = (
     e: React.ChangeEvent<
@@ -48,9 +50,32 @@ const SalesModal: React.FC<SalesModalProps> = ({ isOpen, onClose }) => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
+    setSubmitError(null);
 
-    // Simulate API call
-    await new Promise<void>(resolve => setTimeout(resolve, 2000));
+    try {
+      await submitLead({
+        kind: "sales_inquiry",
+        firstName: formData.firstName,
+        lastName: formData.lastName,
+        email: formData.email,
+        phone: formData.phone || undefined,
+        company: formData.company || undefined,
+        industry: formData.industry || undefined,
+        message: formData.message || undefined,
+        designation: formData.designation || undefined,
+        country: formData.country || undefined,
+        productInterest: formData.productInterest || undefined,
+      });
+    } catch (error) {
+      const message =
+        error instanceof Error
+          ? error.message
+          : "Failed to submit. Please try again.";
+      setIsSubmitting(false);
+      setSubmitError(message);
+      console.error("Lead submission error:", error);
+      return;
+    }
 
     setIsSubmitting(false);
     setIsSubmitted(true);
@@ -384,6 +409,12 @@ const SalesModal: React.FC<SalesModalProps> = ({ isOpen, onClose }) => {
                     placeholder="Tell us about your business requirements, current challenges, or any specific questions you have..."
                   />
                 </div>
+
+                {submitError && (
+                  <div className="rounded-lg border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-700">
+                    {submitError}
+                  </div>
+                )}
 
                 <button
                   type="submit"

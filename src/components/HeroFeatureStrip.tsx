@@ -40,7 +40,7 @@ const features = [
 
 export default function HeroFeatureStrip() {
   return (
-    <section className="w-full bg-[#1E3A8A] py-4">
+    <section className="w-full bg-emerald-700 py-4">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
           {features.map((feature, index) => (

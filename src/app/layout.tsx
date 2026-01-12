@@ -33,6 +33,7 @@
 import "../styles/globals.css";
 import { Montserrat } from "next/font/google";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
+import FloatingActionButton from "@/components/FloatingActionButton";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -57,8 +58,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={montserrat.variable}>
-      <body className="pt-14 md:pt-14">
+      <body className="pt-14 md:pt-14 no-scrollbar" suppressHydrationWarning>
         {children}
+        <FloatingActionButton />
         <GoogleAnalytics />
       </body>
     </html>

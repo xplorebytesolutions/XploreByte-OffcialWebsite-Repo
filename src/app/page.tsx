@@ -904,11 +904,15 @@ export default function Home() {
 
   return (
     <>
-      <Header />
-
-      <main className="hero-bg min-h-screen flex flex-col">
-        <Hero />
+      <div className="h-screen flex flex-col relative overflow-hidden bg-white">
+        <Header />
+        <div className="flex-1 flex flex-col justify-center">
+          <Hero />
+        </div>
         <HeroFeatureStrip />
+      </div>
+
+      <main className="flex flex-col">
         <IndustriesGrid />
         <WhyWhatsAppSection />
 

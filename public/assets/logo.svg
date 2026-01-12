@@ -1,8 +1,0 @@
-<svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <!-- X (Emerald) -->
-  <line x1="6" y1="6" x2="30" y2="30" stroke="#10B981" stroke-width="4" stroke-linecap="round"></line>
-  <line x1="30" y1="6" x2="6" y2="30" stroke="#10B981" stroke-width="4" stroke-linecap="round"></line>
-  <!-- B (White/Gray) -->
-  <path d="M18 9 h6 a4.5 4.5 0 1 1 0 9 h-6" stroke="#F4F4F5" stroke-width="4" stroke-linecap="round" fill="none"></path>
-  <path d="M18 18 h6 a4.5 4.5 0 1 1 0 9 h-6" stroke="#F4F4F5" stroke-width="4" stroke-linecap="round" fill="none"></path>
-</svg>

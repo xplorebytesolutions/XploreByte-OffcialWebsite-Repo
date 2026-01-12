@@ -13,6 +13,7 @@ import {
   Clock,
   Target,
 } from "lucide-react";
+import { submitLead } from "../lib/leadClient";
 
 interface DemoModalProps {
   isOpen: boolean;
@@ -25,17 +26,13 @@ const DemoModal: React.FC<DemoModalProps> = ({ isOpen, onClose }) => {
     lastName: "",
     email: "",
     phone: "",
-    company: "",
-    jobTitle: "",
-    industry: "",
-    companySize: "",
-    currentSolution: "",
-    useCase: "",
+
     additionalInfo: "",
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [submitError, setSubmitError] = useState<string | null>(null);
 
   const handleInputChange = (
     e: React.ChangeEvent<
@@ -52,9 +49,27 @@ const DemoModal: React.FC<DemoModalProps> = ({ isOpen, onClose }) => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
+    setSubmitError(null);
 
-    // Simulate API call
-    await new Promise<void>(resolve => setTimeout(resolve, 2000));
+    try {
+      await submitLead({
+        kind: "demo_request",
+        firstName: formData.firstName,
+        lastName: formData.lastName,
+        email: formData.email,
+        phone: formData.phone || undefined,
+        message: formData.additionalInfo || undefined,
+      });
+    } catch (error) {
+      const message =
+        error instanceof Error
+          ? error.message
+          : "Failed to submit. Please try again.";
+      setIsSubmitting(false);
+      setSubmitError(message);
+      console.error("Lead submission error:", error);
+      return;
+    }
 
     setIsSubmitting(false);
     setIsSubmitted(true);
@@ -67,12 +82,7 @@ const DemoModal: React.FC<DemoModalProps> = ({ isOpen, onClose }) => {
         lastName: "",
         email: "",
         phone: "",
-        company: "",
-        jobTitle: "",
-        industry: "",
-        companySize: "",
-        currentSolution: "",
-        useCase: "",
+
         additionalInfo: "",
       });
       onClose();
@@ -153,7 +163,7 @@ const DemoModal: React.FC<DemoModalProps> = ({ isOpen, onClose }) => {
           </div>
 
           {/* Right Panel - Form */}
-          <div className="p-6 lg:p-8 w-full lg:w-1/2 overflow-y-auto max-h-[90vh]">
+          <div className="p-6 lg:p-8 w-full lg:w-1/2 overflow-y-auto max-h-[90vh] no-scrollbar">
             {!isSubmitted ? (
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
@@ -248,128 +258,11 @@ const DemoModal: React.FC<DemoModalProps> = ({ isOpen, onClose }) => {
                   </div>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <div>
-                    <label
-                      htmlFor="company"
-                      className="block text-sm font-medium text-gray-700 mb-1"
-                    >
-                      Company <span className="text-red-500">*</span>
-                    </label>
-                    <input
-                      type="text"
-                      id="company"
-                      name="company"
-                      value={formData.company}
-                      onChange={handleInputChange}
-                      required
-                      className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#075E54] focus:border-transparent"
-                      placeholder="Company Name"
-                    />
-                  </div>
-                  <div>
-                    <label
-                      htmlFor="jobTitle"
-                      className="block text-sm font-medium text-gray-700 mb-1"
-                    >
-                      Job Title
-                    </label>
-                    <input
-                      type="text"
-                      id="jobTitle"
-                      name="jobTitle"
-                      value={formData.jobTitle}
-                      onChange={handleInputChange}
-                      className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#075E54] focus:border-transparent"
-                      placeholder="e.g., Marketing Manager"
-                    />
-                  </div>
-                </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <div>
-                    <label
-                      htmlFor="industry"
-                      className="block text-sm font-medium text-gray-700 mb-1"
-                    >
-                      Industry
-                    </label>
-                    <select
-                      id="industry"
-                      name="industry"
-                      value={formData.industry}
-                      onChange={handleInputChange}
-                      className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#075E54] focus:border-transparent"
-                    >
-                      <option value="">Select Industry</option>
-                      <option value="healthcare">Healthcare</option>
-                      <option value="beauty-cosmetics">
-                        Beauty & Cosmetics
-                      </option>
-                      <option value="real-estate">Real Estate</option>
-                      <option value="education">Education</option>
-                      <option value="automotive">Automotive</option>
-                      <option value="travel">Travel & Tourism</option>
-                      <option value="food">Food & Restaurants</option>
-                      <option value="spa">Spa & Salons</option>
-                      <option value="freelancer">Freelancers</option>
-                      <option value="other">Other</option>
-                    </select>
-                  </div>
-                  <div>
-                    <label
-                      htmlFor="companySize"
-                      className="block text-sm font-medium text-gray-700 mb-1"
-                    >
-                      Company Size
-                    </label>
-                    <select
-                      id="companySize"
-                      name="companySize"
-                      value={formData.companySize}
-                      onChange={handleInputChange}
-                      className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#075E54] focus:border-transparent"
-                    >
-                      <option value="">Select Size</option>
-                      <option value="1-10">1-10 employees</option>
-                      <option value="11-50">11-50 employees</option>
-                      <option value="51-200">51-200 employees</option>
-                      <option value="201-500">201-500 employees</option>
-                      <option value="500+">500+ employees</option>
-                    </select>
-                  </div>
-                </div>
+
+
 
                 <div>
-                  <label
-                    htmlFor="useCase"
-                    className="block text-sm font-medium text-gray-700 mb-1"
-                  >
-                    Primary Use Case
-                  </label>
-                  <select
-                    id="useCase"
-                    name="useCase"
-                    value={formData.useCase}
-                    onChange={handleInputChange}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#11A944] focus:border-transparent"
-                  >
-                    <option value="">Select Use Case</option>
-                    <option value="customer-support">Customer Support</option>
-                    <option value="marketing">Marketing Campaigns</option>
-                    <option value="sales">Sales & Lead Generation</option>
-                    <option value="appointments">Appointment Booking</option>
-                    <option value="notifications">
-                      Notifications & Updates
-                    </option>
-                    <option value="other">Other</option>
-                  </select>
-                </div>
-
-                <div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-3">
-                    Tell us about your requirements
-                  </h3>
                   <label
                     htmlFor="additionalInfo"
                     className="block text-sm font-medium text-gray-700 mb-1"
@@ -383,9 +276,14 @@ const DemoModal: React.FC<DemoModalProps> = ({ isOpen, onClose }) => {
                     onChange={handleInputChange}
                     rows={4}
                     className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#11A944] focus:border-transparent resize-none"
-                    placeholder="Describe your current challenges, goals, or any specific features you'd like to see during the demo..."
                   />
                 </div>
+
+                {submitError && (
+                  <div className="rounded-lg border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-700">
+                    {submitError}
+                  </div>
+                )}
 
                 <button
                   type="submit"
