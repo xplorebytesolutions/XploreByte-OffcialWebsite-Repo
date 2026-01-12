@@ -16,6 +16,10 @@ function getDatabaseConfig() {
   return {
     connectionString,
     ssl: useSsl ? { rejectUnauthorized: false } : undefined,
+    max: 5,
+    idleTimeoutMillis: 30_000,
+    connectionTimeoutMillis: 10_000,
+    query_timeout: 20_000,
   };
 }
 
@@ -34,4 +38,3 @@ export function getPool() {
 
   return pool;
 }
-

@@ -148,6 +148,20 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({ ok: true, id }, { status: 201 });
   } catch (error: any) {
     const message = typeof error?.message === "string" ? error.message : "";
+    const code = typeof error?.code === "string" ? error.code : undefined;
+    console.error("Lead insert failed:", { code, message });
+
+    if (message.includes("Missing DATABASE_URL")) {
+      return NextResponse.json(
+        {
+          ok: false,
+          error:
+            "Server database is not configured. Set DATABASE_URL (and DATABASE_SSL if needed) and restart the server.",
+        },
+        { status: 500 }
+      );
+    }
+
     const relationMissing =
       typeof message === "string" &&
       (message.includes('relation "lead_submissions" does not exist') ||
@@ -164,10 +178,28 @@ export async function POST(request: NextRequest) {
       );
     }
 
+    const connectionErrorCodes = new Set([
+      "ENOTFOUND",
+      "ECONNREFUSED",
+      "ECONNRESET",
+      "ETIMEDOUT",
+      "EHOSTUNREACH",
+      "EAI_AGAIN",
+    ]);
+    if (code && connectionErrorCodes.has(code)) {
+      return NextResponse.json(
+        {
+          ok: false,
+          error:
+            "Database connection failed. Check host/port, SSL requirement, and any IP allowlist on your Postgres provider.",
+        },
+        { status: 500 }
+      );
+    }
+
     return NextResponse.json(
       { ok: false, error: "Failed to save your request. Please try again." },
       { status: 500 }
     );
   }
 }
-

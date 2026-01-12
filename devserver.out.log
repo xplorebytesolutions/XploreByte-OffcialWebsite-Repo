@@ -8,57 +8,25 @@
    - Environments: .env.local
 
  ✓ Starting...
- ✓ Ready in 4.2s
+ ✓ Ready in 4.3s
+ ○ Compiling /api/leads ...
+ ✓ Compiled /api/leads in 4.7s (289 modules)
+ POST /api/leads 200 in 9386ms
+ POST /api/leads 500 in 21399ms
+ POST /api/leads 201 in 2434ms
+ POST /api/leads 201 in 1479ms
+ POST /api/leads 201 in 1685ms
+ POST /api/leads 201 in 163ms
+ POST /api/leads 201 in 161ms
+ POST /api/leads 201 in 158ms
+ POST /api/leads 201 in 162ms
+ ✓ Compiled in 91ms
+ ✓ Compiled /api/leads in 405ms (102 modules)
+ POST /api/leads 201 in 2539ms
  ○ Compiling / ...
- ✓ Compiled / in 32.4s (10604 modules)
- GET / 200 in 34940ms
- ✓ Compiled in 2.5s (5236 modules)
- ✓ Compiled in 4.4s (10595 modules)
- GET / 200 in 288ms
- ✓ Compiled in 3.8s (10595 modules)
- GET / 200 in 255ms
- ✓ Compiled in 3.7s (10595 modules)
- GET / 200 in 255ms
- ✓ Compiled in 8.3s (10600 modules)
- GET / 200 in 208ms
- ✓ Compiled in 6.8s (10610 modules)
- GET / 200 in 583ms
- ✓ Compiled in 3.6s (10610 modules)
- GET / 200 in 169ms
- ✓ Compiled in 2.1s (10610 modules)
- GET / 200 in 255ms
- GET / 200 in 909ms
- ○ Compiling /features/ai-chatbots-flows ...
- ✓ Compiled /features/ai-chatbots-flows in 6s (10605 modules)
- GET /features/ai-chatbots-flows 200 in 6246ms
- ○ Compiling /industries/healthcare ...
- ✓ Compiled /industries/healthcare in 2.5s (10612 modules)
- GET /features/ai-chatbots-flows 200 in 2489ms
- GET /industries/healthcare 200 in 2711ms
- ✓ Compiled in 8.6s (10620 modules)
- GET /industries/healthcare 200 in 388ms
- ✓ Compiled in 2.7s (10620 modules)
- GET /industries/healthcare 200 in 479ms
- ✓ Compiled in 4.1s (10620 modules)
- GET /industries/healthcare 200 in 197ms
- ✓ Compiled in 5.6s (10620 modules)
- GET /industries/healthcare 200 in 225ms
- ✓ Compiled in 1824ms (10620 modules)
- GET /industries/healthcare 200 in 170ms
- ✓ Compiled in 4.5s (10620 modules)
- ✓ Compiled in 4.9s (10620 modules)
- ✓ Compiled in 4.3s (10620 modules)
- GET / 200 in 338ms
- GET / 200 in 92ms
- GET / 200 in 55ms
- GET / 200 in 54ms
- GET / 200 in 881ms
- GET / 200 in 266ms
- ✓ Compiled in 4.2s (5248 modules)
- ✓ Compiled in 4.1s (10606 modules)
- ✓ Compiled in 1529ms (5248 modules)
- ✓ Compiled in 1263ms (5248 modules)
- ✓ Compiled in 1009ms (5248 modules)
- ✓ Compiled in 3.6s (10622 modules)
- ✓ Compiled in 2.5s (10622 modules)
-[?25h
+ ✓ Compiled / in 19.8s (10613 modules)
+ ○ Compiling /_error ...
+ ✓ Compiled /_error in 7.2s (10927 modules)
+ GET / 500 in 30085ms
+ GET / 500 in 1000ms
+ GET / 500 in 970ms
