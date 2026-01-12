@@ -120,7 +120,7 @@ async function main() {
 
     const inserted = await client.query(
       `
-      insert into lead_submissions (kind, first_name, last_name, email, message, source_path, payload)
+      insert into public.lead_submissions (kind, first_name, last_name, email, message, source_path, payload)
       values ($1,$2,$3,$4,$5,$6,$7::jsonb)
       returning id
       `,

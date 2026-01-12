@@ -101,7 +101,7 @@ export async function POST(request: NextRequest) {
     const pool = getPool();
     const result = await pool.query(
       `
-      insert into lead_submissions (
+      insert into public.lead_submissions (
         kind,
         status,
         first_name,
@@ -201,7 +201,9 @@ export async function POST(request: NextRequest) {
     const relationMissing =
       typeof message === "string" &&
       (message.includes('relation "lead_submissions" does not exist') ||
-        message.includes("relation \"lead_submissions\" does not exist"));
+        message.includes("relation \"lead_submissions\" does not exist") ||
+        message.includes('relation "public.lead_submissions" does not exist') ||
+        message.includes("relation \"public.lead_submissions\" does not exist"));
 
     if (relationMissing) {
       return NextResponse.json(
