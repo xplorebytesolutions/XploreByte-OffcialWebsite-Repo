@@ -57,6 +57,30 @@ function getUrlBoolParam(connectionString, name) {
   return value === "1" || value.toLowerCase() === "true";
 }
 
+function stripSslParamsFromConnectionString(connectionString) {
+  const queryIndex = connectionString.indexOf("?");
+  if (queryIndex < 0) return connectionString;
+
+  const base = connectionString.slice(0, queryIndex);
+  const hashIndex = connectionString.indexOf("#", queryIndex);
+  const query =
+    hashIndex >= 0
+      ? connectionString.slice(queryIndex + 1, hashIndex)
+      : connectionString.slice(queryIndex + 1);
+  const hash = hashIndex >= 0 ? connectionString.slice(hashIndex) : "";
+
+  try {
+    const params = new URLSearchParams(query);
+    for (const key of ["ssl", "sslmode", "sslrootcert", "sslcert", "sslkey", "sslpassword"]) {
+      params.delete(key);
+    }
+    const nextQuery = params.toString();
+    return nextQuery ? `${base}?${nextQuery}${hash}` : `${base}${hash}`;
+  } catch {
+    return connectionString;
+  }
+}
+
 function safeDbInfo(databaseUrl) {
   try {
     const url = new URL(databaseUrl);
@@ -96,8 +120,14 @@ async function main() {
       (process.env.PGSSLMODE || "").toLowerCase()
     );
 
+  // NOTE: `pg` parses `connectionString` and can override `ssl` based on `sslmode`/`ssl` query params.
+  // Strip SSL params so our explicit `ssl` options take precedence.
+  const effectiveDatabaseUrl = sslEnabled
+    ? stripSslParamsFromConnectionString(databaseUrl)
+    : databaseUrl;
+
   const client = new Client({
-    connectionString: databaseUrl,
+    connectionString: effectiveDatabaseUrl,
     ssl: sslEnabled ? { rejectUnauthorized: false } : undefined,
   });
 

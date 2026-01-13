@@ -5,6 +5,42 @@ function normalizeEnv(value: string | undefined) {
   return typeof value === "string" ? value.trim() : "";
 }
 
+function getConnectionStringQueryParams(connectionString: string) {
+  const queryIndex = connectionString.indexOf("?");
+  if (queryIndex < 0) return undefined;
+
+  const hashIndex = connectionString.indexOf("#", queryIndex);
+  const query = hashIndex >= 0 ? connectionString.slice(queryIndex + 1, hashIndex) : connectionString.slice(queryIndex + 1);
+  if (!query) return undefined;
+
+  try {
+    return new URLSearchParams(query);
+  } catch {
+    return undefined;
+  }
+}
+
+function stripSslParamsFromConnectionString(connectionString: string) {
+  const queryIndex = connectionString.indexOf("?");
+  if (queryIndex < 0) return connectionString;
+
+  const base = connectionString.slice(0, queryIndex);
+  const hashIndex = connectionString.indexOf("#", queryIndex);
+  const query = hashIndex >= 0 ? connectionString.slice(queryIndex + 1, hashIndex) : connectionString.slice(queryIndex + 1);
+  const hash = hashIndex >= 0 ? connectionString.slice(hashIndex) : "";
+
+  try {
+    const params = new URLSearchParams(query);
+    for (const key of ["ssl", "sslmode", "sslrootcert", "sslcert", "sslkey", "sslpassword"]) {
+      params.delete(key);
+    }
+    const nextQuery = params.toString();
+    return nextQuery ? `${base}?${nextQuery}${hash}` : `${base}${hash}`;
+  } catch {
+    return connectionString;
+  }
+}
+
 function isTruthyEnv(value: string | undefined) {
   const normalized = normalizeEnv(value).toLowerCase();
   return normalized === "true" || normalized === "1" || normalized === "yes" || normalized === "on";
@@ -16,48 +52,34 @@ function getDatabaseConfig() {
     throw new Error("Missing DATABASE_URL");
   }
 
-  // Robustly determine if SSL is required based on connection string or env vars
-  let useSsl = false;
+  const queryParams = getConnectionStringQueryParams(connectionString);
+  const sslModeFromUrl = normalizeEnv(queryParams?.get("sslmode") ?? undefined).toLowerCase();
+  const sslFromUrl = normalizeEnv(queryParams?.get("ssl") ?? undefined).toLowerCase();
 
-  try {
-    // Attempt standard URL parsing (handles special chars in passwords correctly)
-    const url = new URL(connectionString);
-    const sslMode = url.searchParams.get("sslmode")?.trim().toLowerCase();
-    const ssl = url.searchParams.get("ssl")?.trim().toLowerCase();
+  const pgSslMode = normalizeEnv(process.env.PGSSLMODE).toLowerCase();
 
-    useSsl =
-      sslMode === "require" ||
-      sslMode === "verify-ca" ||
-      sslMode === "verify-full" ||
-      ssl === "true" ||
-      ssl === "1" ||
-      url.protocol === "https:"; // unlikely for postgres but good measure
-  } catch {
-    // Fallback if URL parsing fails (e.g. invalid format), check simple string inclusion
-    // Note: This is less robust but a safety net
-    const csLower = connectionString.toLowerCase();
-    useSsl = csLower.includes("sslmode=require") || csLower.includes("ssl=true");
-  }
-
-  // Environment variable overrides
-  if (
+  const sslModeEnablesSsl = new Set(["require", "verify-ca", "verify-full", "no-verify"]);
+  const useSsl =
     isTruthyEnv(process.env.DATABASE_SSL) ||
-    ["require", "verify-ca", "verify-full"].includes(normalizeEnv(process.env.PGSSLMODE).toLowerCase())
-  ) {
-    useSsl = true;
-  }
+    sslFromUrl === "true" ||
+    sslFromUrl === "1" ||
+    sslModeEnablesSsl.has(sslModeFromUrl) ||
+    sslModeEnablesSsl.has(pgSslMode);
 
-  // Default to FALSE for rejectUnauthorized unless explicitly set to 'true'
-  // This solves "unable to verify the first certificate" for self-signed/managed DBs
-  const rejectUnauthorized = isTruthyEnv(process.env.DATABASE_SSL_REJECT_UNAUTHORIZED);
+  const effectiveSslMode = sslModeFromUrl || pgSslMode;
+
+  const rejectUnauthorizedEnv = normalizeEnv(process.env.DATABASE_SSL_REJECT_UNAUTHORIZED);
+  const rejectUnauthorizedDefault = effectiveSslMode === "verify-ca" || effectiveSslMode === "verify-full";
+  const rejectUnauthorized =
+    rejectUnauthorizedEnv !== "" ? isTruthyEnv(rejectUnauthorizedEnv) : rejectUnauthorizedDefault;
 
   const ca = normalizeEnv(process.env.DATABASE_SSL_CA);
   const caPem = ca ? ca.replace(/\\n/g, "\n") : undefined;
 
   return {
-    connectionString,
-    // If SSL is used, we explicitly configure it.
-    // By passing the object, we override potential strict defaults from the connection string.
+    // NOTE: `pg` parses `connectionString` and can override `ssl` based on `sslmode`/`ssl` query params.
+    // Strip SSL params so our explicit `ssl` options (esp. `rejectUnauthorized`) take precedence.
+    connectionString: useSsl ? stripSslParamsFromConnectionString(connectionString) : connectionString,
     ssl: useSsl ? { rejectUnauthorized, ...(caPem ? { ca: caPem } : {}) } : undefined,
     max: 5,
     idleTimeoutMillis: 30_000,
