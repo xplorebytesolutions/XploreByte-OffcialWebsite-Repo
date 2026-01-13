@@ -235,6 +235,23 @@ export async function POST(request: NextRequest) {
       );
     }
 
+    const tlsVerificationFailed =
+      code === "UNABLE_TO_VERIFY_LEAF_SIGNATURE" ||
+      code === "SELF_SIGNED_CERT_IN_CHAIN" ||
+      code === "DEPTH_ZERO_SELF_SIGNED_CERT" ||
+      message.toLowerCase().includes("unable to verify the first certificate") ||
+      message.toLowerCase().includes("self signed certificate");
+    if (tlsVerificationFailed) {
+      return NextResponse.json(
+        {
+          ok: false,
+          error:
+            "Database SSL certificate could not be verified. Set DATABASE_SSL_REJECT_UNAUTHORIZED=false, or provide the CA cert in DATABASE_SSL_CA and set DATABASE_SSL_REJECT_UNAUTHORIZED=true, then restart the server.",
+        },
+        { status: 500 }
+      );
+    }
+
     return NextResponse.json(
       { ok: false, error: `Failed to save your request. Please try again. (Debug: ${message})` },
       { status: 500 }
