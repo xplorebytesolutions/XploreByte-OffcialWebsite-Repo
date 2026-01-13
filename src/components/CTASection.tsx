@@ -44,7 +44,7 @@ const CTASection = () => {
             </button>
             <button
               onClick={() => setIsDemoModalOpen(true)}
-              className="inline-flex items-center px-8 py-4 rounded-lg border-2 font-medium transition-all duration-200 font-sans border-[#25D366] text-[#25D366] hover:bg-[#25D366] hover:text-white"
+              className="inline-flex items-center px-8 py-4 rounded-lg font-medium transition-all duration-200 font-sans shadow-lg hover:shadow-xl bg-emerald-700 text-white hover:bg-emerald-800"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"

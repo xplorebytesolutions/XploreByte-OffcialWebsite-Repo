@@ -747,7 +747,7 @@ const Header: FC = () => {
             {/* Book Demo Button */}
             <button
               onClick={() => setIsDemoModalOpen(true)}
-              className="hidden sm:inline-flex items-center px-4 py-2 rounded-lg bg-[#1E3A8A] text-white font-semibold font-sans text-sm shadow-lg hover:bg-[#1E40AF] transition duration-200"
+              className="hidden sm:inline-flex items-center px-4 py-2 rounded-lg bg-emerald-700 text-white font-semibold font-sans text-sm shadow-lg hover:bg-emerald-800 transition duration-200"
             >
               Book Demo
             </button>
@@ -788,7 +788,7 @@ const Header: FC = () => {
                 setIsDemoModalOpen(true);
                 setMobileMenuOpen(false);
               }}
-              className="block mt-3 px-4 py-2 rounded-lg bg-[#1E3A8A] text-white font-semibold text-center font-sans shadow-lg hover:bg-[#1E40AF] transition duration-200 w-full"
+              className="block mt-3 px-4 py-2 rounded-lg bg-emerald-700 text-white font-semibold text-center font-sans shadow-lg hover:bg-emerald-800 transition duration-200 w-full"
             >
               Book Demo
             </button>

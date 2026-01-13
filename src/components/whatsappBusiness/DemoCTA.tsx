@@ -20,7 +20,7 @@ const DemoCTA: React.FC = () => {
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
           <button
             onClick={() => setIsDemoModalOpen(true)}
-            className="bg-emerald-600 hover:bg-emerald-500 text-white px-7 py-3 rounded-lg font-semibold shadow transition text-lg"
+            className="bg-emerald-700 hover:bg-emerald-800 text-white px-7 py-3 rounded-lg font-semibold shadow transition text-lg"
           >
             Book a Demo
           </button>

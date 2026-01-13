@@ -195,7 +195,7 @@ const Hero: FC = () => {
           >
             <button
               onClick={() => setIsDemoModalOpen(true)}
-              className="inline-flex items-center px-6 py-3 rounded-md font-semibold border-2 border-black bg-black text-white hover:bg-gray-800 hover:border-gray-800 transition duration-200 group"
+              className="inline-flex items-center px-6 py-3 rounded-md font-semibold border-2 border-emerald-700 bg-emerald-700 text-white hover:bg-emerald-800 hover:border-emerald-800 transition duration-200 group"
               style={{
                 fontFamily: "Montserrat, sans-serif",
                 fontSize: "1rem",
@@ -212,7 +212,7 @@ const Hero: FC = () => {
             </button>
             <button
               onClick={() => setIsSalesModalOpen(true)}
-              className="inline-flex items-center px-6 py-3 rounded-md font-semibold border-2 border-black text-black hover:bg-gray-100 transition duration-200 group"
+              className="inline-flex items-center px-6 py-3 rounded-md font-semibold border-2 border-emerald-700 text-emerald-700 hover:bg-emerald-50 transition duration-200 group"
               style={{
                 fontFamily: "Montserrat, sans-serif",
                 fontSize: "1rem",

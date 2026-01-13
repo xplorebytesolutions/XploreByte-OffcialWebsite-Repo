@@ -1504,7 +1504,7 @@ export default function Home() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button
                 onClick={() => setIsSalesModalOpen(true)}
-                className="inline-flex items-center px-8 py-3 bg-[#11A944] text-white font-semibold rounded-lg hover:bg-[#0d8a3a] transition-colors"
+                className="inline-flex items-center px-8 py-3 rounded-lg font-semibold border-2 border-emerald-700 text-emerald-700 hover:bg-emerald-50 transition-colors"
               >
                 Talk to Sales
                 <svg
@@ -1523,7 +1523,7 @@ export default function Home() {
               </button>
               <a
                 href="/whatsapp-business"
-                className="inline-flex items-center px-8 py-3 border-2 border-[#11A944] text-[#11A944] font-semibold rounded-lg hover:bg-[#11A944] hover:text-white transition-colors"
+                className="inline-flex items-center px-8 py-3 bg-emerald-700 text-white font-semibold rounded-lg hover:bg-emerald-800 transition-colors"
               >
                 Book a Demo
               </a>
