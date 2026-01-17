@@ -185,7 +185,7 @@ export default function WhatsAppCrmForLogisticsPage() {
                   },
                   {
                     title: "Slow confirmations",
-                    body: "No automated confirmations for pickup scheduling or delivery updates—so customers keep asking "Where is my order?"",
+                    body: 'No automated confirmations for pickup scheduling or delivery updates—so customers keep asking "Where is my order?"',
                   },
                   {
                     title: "No ownership",

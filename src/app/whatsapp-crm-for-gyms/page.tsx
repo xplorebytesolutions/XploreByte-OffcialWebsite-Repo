@@ -188,7 +188,7 @@ export default function WhatsAppCrmForGymsPage() {
                   },
                   {
                     title: "Slow follow-ups",
-                    body: "No reminders for "thinking about it" leads—so they join another gym.",
+                    body: 'No reminders for "thinking about it" leads—so they join another gym.',
                   },
                   {
                     title: "No ownership",

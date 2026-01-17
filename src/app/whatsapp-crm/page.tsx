@@ -15,7 +15,7 @@ const PAGE_PATH = "/whatsapp-crm";
 const PAGE_URL = `${SITE_URL}${PAGE_PATH}`;
 
 export const metadata: Metadata = {
-  metadataBase: new URL(SITE_URL),
+//   metadataBase: new URL(SITE_URL),
   title: { absolute: "WhatsApp CRM for Small Businesses | XploreByte" },
   description:
     "XploreByte is a WhatsApp CRM for small businesses with WhatsApp Business API integration, Team Inbox, No-Code Chatbot Builder, Campaigning, and Advanced Analytics reports. Start a free trial.",

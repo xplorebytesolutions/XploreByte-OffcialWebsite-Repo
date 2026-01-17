@@ -184,7 +184,7 @@ export default function WhatsAppCrmForEventPlannersPage() {
                   },
                   {
                     title: "Slow quotation follow-ups",
-                    body: "No reminders for "thinking about it" clients—so they book with faster-moving competitors.",
+                    body: 'No reminders for "thinking about it" clients—so they book with faster-moving competitors.',
                   },
                   {
                     title: "No ownership",

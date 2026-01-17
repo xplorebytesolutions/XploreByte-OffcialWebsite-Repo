@@ -192,7 +192,7 @@ export default function WhatsAppCrmForRestaurantsPage() {
                   },
                   {
                     title: "Slow confirmations",
-                    body: "No structured order acceptance or delivery updates—customers keep asking "where is my order?"",
+                    body: 'No structured order acceptance or delivery updates—customers keep asking "where is my order?"',
                   },
                   {
                     title: "No ownership",
