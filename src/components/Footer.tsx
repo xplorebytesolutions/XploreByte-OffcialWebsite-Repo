@@ -1,6 +1,6 @@
 "use client";
-import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 // Social Media Icons
 const socials = [
@@ -66,13 +66,15 @@ const Footer = () => {
   return (
     <footer className="bg-gradient-to-br from-slate-900 via-gray-900 to-slate-800 text-gray-200 relative overflow-hidden border-t border-slate-700/50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 mb-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-7 gap-10 mb-10">
           {/* Brand */}
           <div className="lg:col-span-2 flex flex-col gap-6">
             <Link href="/" className="flex items-center space-x-3 mb-2">
-              <img
+              <Image
                 src="/xplorebyte_logo.svg"
                 alt="XploreByte Logo"
+                width={40}
+                height={40}
                 className="h-10 w-auto"
               />
               <span className="text-gray-200 text-xl font-bold font-[Poppins,Montserrat,sans-serif] tracking-tight">
@@ -82,9 +84,26 @@ const Footer = () => {
                 </span>
               </span>
             </Link>
-            <p className="max-w-md font-sans text-gray-300 text-sm leading-normal">
-              XploreByte is a WhatsApp First CRM - built to help teams move
-              faster with a Team Inbox + automation.
+            <p className="max-w-md font-sans text-gray-300 text-sm leading-relaxed">
+              XploreByte is a WhatsApp-first CRM built to help teams move faster
+              with a Team Inbox, automation, and analytics.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-3">
+              <Link
+                href="/start-free-trial"
+                className="inline-flex items-center justify-center rounded-xl bg-emerald-600 px-5 py-2.5 font-semibold text-white shadow-sm hover:bg-emerald-700 transition-colors"
+              >
+                Start Free Trial
+              </Link>
+              <Link
+                href="/demo-request"
+                className="inline-flex items-center justify-center rounded-xl border border-white/25 bg-white/5 px-5 py-2.5 font-semibold text-gray-100 hover:bg-white/10 transition-colors"
+              >
+                Book a Demo
+              </Link>
+            </div>
+            <p className="text-xs text-gray-400">
+              No credit card required for the trial.
             </p>
           </div>
 
@@ -166,6 +185,80 @@ const Footer = () => {
             </ul>
           </div>
 
+          {/* Tools */}
+          <div>
+            <h3 className="text-white/90 text-sm font-semibold uppercase tracking-wide mb-4">
+              Tools
+            </h3>
+            <ul className="space-y-2 text-gray-300 text-sm">
+              <li>
+                <Link
+                  href="/tools/whatsapp-link"
+                  className="hover:text-emerald-400 transition-colors duration-300"
+                >
+                  WhatsApp Link Generator
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/pricing"
+                  className="hover:text-emerald-400 transition-colors duration-300"
+                >
+                  Pricing
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/demo-request"
+                  className="hover:text-emerald-400 transition-colors duration-300"
+                >
+                  Book a Demo
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Resources */}
+          <div>
+            <h3 className="text-white/90 text-sm font-semibold uppercase tracking-wide mb-4">
+              Resources
+            </h3>
+            <ul className="space-y-2 text-gray-300 text-sm">
+              <li>
+                <Link
+                  href="/api-documentation"
+                  className="hover:text-emerald-400 transition-colors duration-300"
+                >
+                  Developer Docs
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/support-center"
+                  className="hover:text-emerald-400 transition-colors duration-300"
+                >
+                  Help Center
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/guides"
+                  className="hover:text-emerald-400 transition-colors duration-300"
+                >
+                  Guides
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/product-updates"
+                  className="hover:text-emerald-400 transition-colors duration-300"
+                >
+                  Product Updates
+                </Link>
+              </li>
+            </ul>
+          </div>
+
           {/* Contact Information */}
           <div>
             <h3 className="text-white/90 text-sm font-semibold uppercase tracking-wide mb-4">Contact</h3>
@@ -222,8 +315,8 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Call To Action & Legal */}
-        <div className="flex flex-col sm:flex-row items-center justify-between border-t border-slate-700/50 pt-8 gap-6">
+        {/* Bottom Bar */}
+        <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between border-t border-slate-700/50 pt-8 gap-6">
           <div className="flex items-center gap-3 mb-2 sm:mb-0">
             <span className="text-sm font-sans text-gray-400">
               © 2018-2025 XploreByte Solutions. All rights reserved.
@@ -231,7 +324,7 @@ const Footer = () => {
           </div>
 
           {/* Social Media Icons */}
-          <div className="flex space-x-4">
+          <div className="flex flex-wrap gap-3">
             {socials.map(({ label, href, icon, color, hover }) => (
               <a
                 key={label}
@@ -239,7 +332,7 @@ const Footer = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={label}
-                className={`rounded-lg transition-all duration-300 p-3 bg-white/10 hover:bg-white/20 hover:scale-105 ${color} ${hover} backdrop-blur-sm border border-white/20 hover:border-white/30 shadow-md hover:shadow-lg`}
+                className={`rounded-xl transition-all duration-300 p-3 bg-white/10 hover:bg-white/15 hover:scale-105 ${color} ${hover} backdrop-blur-sm border border-white/15 hover:border-white/25 shadow-md hover:shadow-lg`}
               >
                 {icon}
               </a>
@@ -251,6 +344,7 @@ const Footer = () => {
         <button
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
           className="absolute right-6 bottom-6 rounded-full p-2 bg-black/70 hover:bg-emerald-500 transition"
+          aria-label="Back to top"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"

@@ -24,6 +24,7 @@ import {
   Headphones,
   TrendingUp,
   MessageSquare,
+  Link as LinkIcon,
 } from "lucide-react";
 import DemoModal from "./DemoModal";
 
@@ -265,6 +266,13 @@ const Header: FC = () => {
                                 <BarChart3 className="w-4 h-4 mr-2 text-slate-500 group-hover:text-emerald-600" />
                                 Analytics & Reporting
                               </Link>
+                              <Link
+                                href="/tools/whatsapp-link"
+                                className="flex items-center text-slate-800 font-semibold hover:text-emerald-600 transition-colors group text-base"
+                              >
+                                <LinkIcon className="w-4 h-4 mr-2 text-slate-500 group-hover:text-emerald-600" />
+                                WhatsApp Link Generator
+                              </Link>
                             </div>
                           </div>
 
@@ -405,6 +413,13 @@ const Header: FC = () => {
                               >
                                 <BarChart3 className="w-4 h-4 mr-2 text-slate-500 group-hover:text-emerald-600" />
                                 Analytics & Reporting
+                              </Link>
+                              <Link
+                                href="/tools/whatsapp-link"
+                                className="flex items-center text-slate-800 font-semibold hover:text-emerald-600 transition-colors group text-base"
+                              >
+                                <LinkIcon className="w-4 h-4 mr-2 text-slate-500 group-hover:text-emerald-600" />
+                                WhatsApp Link Generator
                               </Link>
                             </div>
                           </div>
@@ -610,6 +625,23 @@ const Header: FC = () => {
                                   </p>
                                 </div>
                               </div>
+
+                              <Link
+                                href="/tools/whatsapp-link"
+                                className="flex items-start gap-3 group cursor-pointer"
+                              >
+                                <div className="w-10 h-10 bg-purple-100 rounded-lg flex items-center justify-center group-hover:bg-purple-200 transition-colors">
+                                  <LinkIcon className="w-5 h-5 text-purple-600" />
+                                </div>
+                                <div>
+                                  <h4 className="font-semibold text-gray-900 group-hover:text-purple-600 transition-colors">
+                                    WhatsApp Link Generator
+                                  </h4>
+                                  <p className="text-sm text-gray-800">
+                                    Create chat links & QR codes
+                                  </p>
+                                </div>
+                              </Link>
                             </div>
                           </div>
 

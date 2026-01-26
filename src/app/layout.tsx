@@ -31,12 +31,14 @@
 // }
 
 import "../styles/globals.css";
+import "react-toastify/dist/ReactToastify.css";
 import { Suspense } from "react";
 import { Montserrat } from "next/font/google";
 import type { Metadata } from "next";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
 import FloatingActionButton from "@/components/FloatingActionButton";
 import { AnalyticsRouteTracker } from "@/components/AnalyticsRouteTracker";
+import ToastProvider from "@/components/ToastProvider";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -143,6 +145,7 @@ export default function RootLayout({
           <AnalyticsRouteTracker />
         </Suspense>
         {children}
+        <ToastProvider />
         <FloatingActionButton />
       </body>
     </html>

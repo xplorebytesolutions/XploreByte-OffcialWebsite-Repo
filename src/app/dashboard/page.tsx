@@ -130,6 +130,18 @@ export default function Dashboard() {
             <FolderOpen className="w-5 h-5" />
             <span>All Projects</span>
           </Link>
+
+          <div className="my-4 border-t border-blue-800"></div>
+          <div className="px-4 pt-2 pb-1 text-xs uppercase tracking-wider text-blue-200">
+            Tools
+          </div>
+          <Link
+            href="/tools/whatsapp-link"
+            className="flex items-center gap-3 px-4 py-3 hover:bg-white/10 rounded-lg text-gray-300"
+          >
+            <LinkIcon className="w-5 h-5" />
+            <span>WhatsApp Link Generator</span>
+          </Link>
         </nav>
 
         {/* User Profile at Bottom */}
