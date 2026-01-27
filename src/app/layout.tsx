@@ -1,56 +1,17 @@
-// import "../styles/globals.css";
-// import { Montserrat } from "next/font/google";
-// import GoogleAnalytics from "@/components/GoogleAnalytics";
-// const montserrat = Montserrat({
-//   subsets: ["latin"],
-//   weight: ["200", "300", "300"],
-//   variable: "--font-montserrat",
-//   display: "swap",
-// });
-// export const metadata = {
-//   title: "XploreByte Solutions",
-//   description: "Elite SaaS and digital solutions for ambitious businesses.",
-//   icons: [
-//     { rel: "icon", url: "/assets/logo_7.svg", type: "image/svg+xml" },
-//     { rel: "icon", url: "/favicon.png", type: "image/png", sizes: "32x32" },
-//   ],
-// };
-
-// export default function RootLayout({
-//   children,
-// }: {
-//   children: React.ReactNode;
-// }) {
-//   return (
-//     <html lang="en">
-//       <body>
-//         {children} <GoogleAnalytics />
-//       </body>
-//     </html>
-//   );
-// }
-
-import "../styles/globals.css";
-import "react-toastify/dist/ReactToastify.css";
-import { Suspense } from "react";
-import { Montserrat } from "next/font/google";
-import type { Metadata } from "next";
+import { Inter } from "next/font/google"; // Changed to Inter
+import "./globals.css";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
-import FloatingActionButton from "@/components/FloatingActionButton";
-import { AnalyticsRouteTracker } from "@/components/AnalyticsRouteTracker";
 import ToastProvider from "@/components/ToastProvider";
+import GoogleTagManager from "@/components/GoogleTagManager";
+import type { Metadata } from "next";
 
-const montserrat = Montserrat({
-  subsets: ["latin"],
-  weight: ["200", "300", "400", "500", "600", "700", "800"], // Added weights for bold fonts
-  variable: "--font-montserrat",
-  display: "swap",
-});
+const inter = Inter({ subsets: ["latin"] }); // Used Inter for consistency
 
 const SITE_URL = (
   process.env.NEXT_PUBLIC_SITE_URL || "https://xplorebyte.com"
 ).replace(/\/+$/, "");
-
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -102,6 +63,7 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  const GTM_ID = process.env.NEXT_PUBLIC_GTM_ID;
   const structuredData = {
     "@context": "https://schema.org",
     "@graph": [
@@ -132,21 +94,37 @@ export default function RootLayout({
   };
 
   return (
-    <html lang="en" className={montserrat.variable}>
+    <html lang="en" className={inter.className}>
       <head>
+        {/*
+          Warning: If GA4 is later added inside GTM, disable the direct GoogleAnalytics component
+          below to avoid double counting.
+        */}
+        <GoogleAnalytics />
+        <GoogleTagManager gtmId={GTM_ID} />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
         />
       </head>
       <body className="pt-14 md:pt-14 no-scrollbar" suppressHydrationWarning>
-        <GoogleAnalytics />
-        <Suspense fallback={null}>
-          <AnalyticsRouteTracker />
-        </Suspense>
-        {children}
-        <ToastProvider />
-        <FloatingActionButton />
+        {/* GTM Noscript iframe */}
+        {GTM_ID && (
+          <noscript>
+            <iframe
+              src={`https://www.googletagmanager.com/ns.html?id=${GTM_ID}`}
+              height="0"
+              width="0"
+              style={{ display: "none", visibility: "hidden" }}
+            ></iframe>
+          </noscript>
+        )}
+
+        <ToastProvider>
+          <Header />
+          {children}
+          <Footer />
+        </ToastProvider>
       </body>
     </html>
   );
