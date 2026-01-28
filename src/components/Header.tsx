@@ -81,7 +81,7 @@ const Header: FC = () => {
               className="h-8 w-auto"
             />
             <span className="flex items-center space-x-3 group">
-              <span className="text-gray-900 text-xl font-bold tracking-tight">
+              <span className="text-gray-900 text-xl font-semibold tracking-tight">
                 XploreByte
               </span>
               {/* <span className="bg-gradient-to-r from-emerald-400 via-cyan-400 to-blue-500 bg-clip-text text-transparent text-2xl font-extrabold tracking-tight font-[Sora,sans-serif]">
@@ -266,13 +266,6 @@ const Header: FC = () => {
                                 <BarChart3 className="w-3.5 h-3.5 mr-2 text-slate-400 group-hover:text-emerald-600" />
                                 Analytics & Reporting
                               </Link>
-                              <Link
-                                href="/tools/whatsapp-link"
-                                className="flex items-center text-slate-800 font-semibold hover:text-emerald-600 transition-colors group text-sm"
-                              >
-                                <LinkIcon className="w-3.5 h-3.5 mr-2 text-slate-400 group-hover:text-emerald-600" />
-                                WhatsApp Link Generator
-                              </Link>
                             </div>
                           </div>
 
@@ -384,7 +377,7 @@ const Header: FC = () => {
                                 className="flex items-center text-slate-800 font-semibold hover:text-emerald-600 transition-colors group text-sm"
                               >
                                 <Bot className="w-3.5 h-3.5 mr-2 text-slate-400 group-hover:text-emerald-600" />
-                                AI Chatbots & Flows
+                                No Code Chatbots Builder
                               </Link>
                               <Link
                                 href="/features/campaigns-broadcasting"

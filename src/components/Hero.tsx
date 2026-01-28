@@ -133,7 +133,7 @@ const Hero: FC = () => {
           </motion.div> */}
 
           {/* Breadcrumbs */}
-          <motion.div
+          {/* <motion.div
             className="text-xs font-medium uppercase tracking-widest text-gray-600 mb-4"
             style={{
               letterSpacing: "1.5px",
@@ -141,7 +141,7 @@ const Hero: FC = () => {
             variants={fadeUp}
           >
             WhatsApp First CRM
-          </motion.div>
+          </motion.div> */}
 
           {/* Main Headline - MARKETING TEAM: Update this headline as needed */}
           <motion.h1
@@ -166,7 +166,8 @@ const Hero: FC = () => {
             }}
             variants={fadeUp}
           >
-            Built for small businesses, XploreByte brings WhatsApp Business API into a WhatsApp CRM—start your free trial.
+            Built for small businesses, XploreByte brings WhatsApp Business API
+            into a WhatsApp CRM—start your free trial.
           </motion.p>
 
           {/* Description */}

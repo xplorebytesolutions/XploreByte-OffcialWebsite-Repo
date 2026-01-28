@@ -136,14 +136,6 @@ const Footer = () => {
                   Data Deletion
                 </Link>
               </li>
-              <li>
-                <Link
-                  href="/acceptable-use-policy"
-                  className="hover:text-emerald-400 transition-colors duration-300"
-                >
-                  Acceptable Use Policy
-                </Link>
-              </li>
             </ul>
           </div>
 
@@ -191,7 +183,7 @@ const Footer = () => {
           {/* Tools */}
           <div>
             <h3 className="text-white/90 text-sm font-semibold uppercase tracking-wide mb-4">
-              Tools
+              Quick Link
             </h3>
             <ul className="space-y-2 text-gray-300 text-sm">
               <li>
@@ -312,7 +304,7 @@ const Footer = () => {
                     href="tel:+918826165727"
                     className="hover:text-emerald-400 transition-colors duration-300"
                   >
-                    +91 88261 65727
+                    +91 8826165727
                   </a>
                 </div>
               </div>
