@@ -1,8 +1,6 @@
 "use client";
 
 import { FC, useState } from "react";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
 import SalesModal from "@/components/SalesModal";
 import {
   Truck,
@@ -18,8 +16,6 @@ const TransportationLogisticsPage: FC = () => {
 
   return (
     <div className="min-h-screen bg-white">
-      <Header />
-
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-orange-50 via-red-50 to-pink-50 py-20">
         <div className="container mx-auto px-4">
@@ -165,8 +161,6 @@ const TransportationLogisticsPage: FC = () => {
           </button>
         </div>
       </section>
-
-      <Footer />
 
       {/* Sales Modal */}
       <SalesModal

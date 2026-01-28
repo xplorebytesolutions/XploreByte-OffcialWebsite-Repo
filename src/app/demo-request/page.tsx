@@ -1,8 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import Header from "../../components/Header";
-import Footer from "../../components/Footer";
+
+
 import DemoModal from "../../components/DemoModal";
 import SalesModal from "../../components/SalesModal";
 import CTAForm from "../../components/CTAForm";
@@ -13,8 +13,6 @@ export default function DemoRequest() {
   const [isSalesModalOpen, setIsSalesModalOpen] = useState(false);
   return (
     <>
-      <Header />
-
       <main className="min-h-screen bg-gray-50">
         {/* Hero Section */}
         <section className="bg-gradient-to-br from-[#0A0E23] via-[#202748] to-[#11A944]/40 py-20">
@@ -289,9 +287,6 @@ export default function DemoRequest() {
           </div>
         </section>
       </main>
-
-      <Footer />
-
       {/* Demo Modal */}
       <DemoModal
         isOpen={isDemoModalOpen}

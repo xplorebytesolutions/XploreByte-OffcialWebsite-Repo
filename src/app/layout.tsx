@@ -1,13 +1,14 @@
-import { Inter } from "next/font/google"; // Changed to Inter
+import { Montserrat } from "next/font/google";
 import "../styles/globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import FloatingActionButton from "@/components/FloatingActionButton";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
 import ToastProvider from "@/components/ToastProvider";
 import GoogleTagManager from "@/components/GoogleTagManager";
 import type { Metadata } from "next";
 
-const inter = Inter({ subsets: ["latin"] }); // Used Inter for consistency
+const montserrat = Montserrat({ subsets: ["latin"], variable: "--font-montserrat" });
 
 const SITE_URL = (
   process.env.NEXT_PUBLIC_SITE_URL || "https://xplorebyte.com"
@@ -94,7 +95,7 @@ export default function RootLayout({
   };
 
   return (
-    <html lang="en" className={inter.className}>
+    <html lang="en" className={montserrat.className}>
       <head>
         {/*
           Warning: If GA4 is later added inside GTM, disable the direct GoogleAnalytics component
@@ -124,6 +125,7 @@ export default function RootLayout({
           <Header />
           {children}
           <Footer />
+          <FloatingActionButton />
         </ToastProvider>
       </body>
     </html>

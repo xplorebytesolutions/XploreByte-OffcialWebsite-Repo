@@ -1,8 +1,6 @@
 "use client";
 
 import { FC, useState } from "react";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
 import DemoModal from "@/components/DemoModal";
 import {
   ShoppingCart,
@@ -13,11 +11,10 @@ import {
   Zap,
 } from "lucide-react";
 
-const RetailEcommercePage: FC = () => {
+export default function RetailEcommerce() {
   const [isDemoModalOpen, setIsDemoModalOpen] = useState(false);
   return (
-    <div className="min-h-screen bg-white">
-      <Header />
+    <main className="min-h-screen bg-white">
 
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 py-20">
@@ -169,15 +166,11 @@ const RetailEcommercePage: FC = () => {
         </div>
       </section>
 
-      <Footer />
-
       {/* Demo Modal */}
       <DemoModal
         isOpen={isDemoModalOpen}
         onClose={() => setIsDemoModalOpen(false)}
       />
-    </div>
+    </main>
   );
 };
-
-export default RetailEcommercePage;

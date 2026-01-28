@@ -2,8 +2,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Script from "next/script";
-import Header from "../../components/Header";
-import Footer from "../../components/Footer";
+
 
 const SITE_URL = (
   process.env.NEXT_PUBLIC_SITE_URL || "https://xplorebyte.com"
@@ -102,8 +101,6 @@ export const metadata: Metadata = {
 export default function WhatsAppTeamInboxPage() {
   return (
     <>
-      <Header />
-
       {/* ✅ FAQ JSON-LD */}
       <Script id="faq-jsonld" type="application/ld+json">
         {JSON.stringify(faqJsonLd)}

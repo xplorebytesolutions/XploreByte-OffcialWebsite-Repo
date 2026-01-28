@@ -3,8 +3,6 @@
 import Link from "next/link";
 import { Eye, EyeOff, ArrowRight, Lock, Mail } from "lucide-react";
 import { useState } from "react";
-import Header from "../../components/Header";
-import Footer from "../../components/Footer";
 
 export default function LoginClient() {
   const [showPassword, setShowPassword] = useState(false);
@@ -30,8 +28,6 @@ export default function LoginClient() {
 
   return (
     <>
-      <Header />
-
       <main className="min-h-screen bg-gray-50 flex items-center justify-center py-12">
         <div className="max-w-md w-full mx-auto">
           {/* Login Card */}
@@ -216,8 +212,6 @@ export default function LoginClient() {
           </div>
         </div>
       </main>
-
-      <Footer />
     </>
   );
 }

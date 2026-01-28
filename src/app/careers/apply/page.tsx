@@ -2,8 +2,8 @@
 
 import { useState, Suspense } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
-import Header from "../../../components/Header";
-import Footer from "../../../components/Footer";
+
+
 import { ArrowLeft, Upload, FileText, User, Briefcase, Calendar, CheckCircle, AlertCircle, X } from "lucide-react";
 
 const jobPositions = [
@@ -187,8 +187,6 @@ function JobApplicationForm() {
 
   return (
     <>
-      <Header />
-
       <main className="min-h-screen bg-gray-50">
         {/* Header */}
         <div className="bg-white border-b">

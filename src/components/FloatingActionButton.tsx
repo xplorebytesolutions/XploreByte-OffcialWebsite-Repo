@@ -45,7 +45,7 @@ function IconX(props: React.SVGProps<SVGSVGElement>) {
 
 export default function FloatingActionButton() {
   return (
-    <div className="fixed bottom-6 right-4 z-50">
+    <div className="fixed bottom-10 right-2 z-50">
       <input id="fab-toggle" type="checkbox" className="peer sr-only" />
 
       {/* Contact Options */}
@@ -83,14 +83,14 @@ export default function FloatingActionButton() {
       {/* Main FAB Button */}
       <label
         htmlFor="fab-toggle"
-        className="group w-14 h-14 rounded-full shadow-lg transition-all duration-300 flex items-center justify-center cursor-pointer select-none bg-[#25D366] hover:bg-[#1ea854] hover:scale-110 peer-checked:bg-gray-600 peer-checked:hover:bg-gray-700 peer-checked:rotate-90 peer-checked:[&_.fab-open]:hidden peer-checked:[&_.fab-close]:block peer-checked:[&_.fab-tooltip]:hidden"
+        className="group w-12 h-12 rounded-full shadow-lg transition-all duration-300 flex items-center justify-center cursor-pointer select-none bg-[#25D366] hover:bg-[#1ea854] hover:scale-110 peer-checked:bg-gray-600 peer-checked:hover:bg-gray-700 peer-checked:rotate-90 peer-checked:[&_.fab-open]:hidden peer-checked:[&_.fab-close]:block peer-checked:[&_.fab-tooltip]:hidden"
         aria-label="Toggle contact options"
       >
-        <IconWhatsApp className="fab-open w-8 h-8 text-white" />
-        <IconX className="fab-close hidden w-6 h-6 text-white" />
+        <IconWhatsApp className="fab-open w-6 h-6 text-white" />
+        <IconX className="fab-close hidden w-5 h-5 text-white" />
 
         {/* Tooltip */}
-        <div className="fab-tooltip absolute right-16 top-1/2 -translate-y-1/2 bg-gray-900 text-white px-3 py-2 rounded-lg text-sm font-medium whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+        <div className="fab-tooltip absolute right-14 top-1/2 -translate-y-1/2 bg-gray-900 text-white px-3 py-2 rounded-lg text-sm font-medium whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-200">
           Chat with us
           <div className="absolute right-0 top-1/2 translate-x-1 -translate-y-1/2 w-2 h-2 bg-gray-900 rotate-45" />
         </div>

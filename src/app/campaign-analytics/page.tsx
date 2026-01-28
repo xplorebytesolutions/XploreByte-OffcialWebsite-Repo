@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import Header from "../../components/Header";
-import Footer from "../../components/Footer";
+
 
 const SITE_URL = (
   process.env.NEXT_PUBLIC_SITE_URL || "https://xplorebyte.com"
@@ -89,7 +88,6 @@ export default function CampaignAnalyticsPage() {
 
   return (
     <>
-      <Header />
       <main className="min-h-screen bg-white">
         <section className="bg-gradient-to-br from-[#0A0E23] via-[#202748] to-[#11A944]/30 py-16">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">

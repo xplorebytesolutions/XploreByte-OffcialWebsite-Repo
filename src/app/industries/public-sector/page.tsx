@@ -1,8 +1,6 @@
 "use client";
 
 import { FC, useState } from "react";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
 import SalesModal from "@/components/SalesModal";
 import {
   Building2,
@@ -17,9 +15,7 @@ const PublicSectorPage: FC = () => {
   const [isSalesModalOpen, setIsSalesModalOpen] = useState(false);
 
   return (
-    <div className="min-h-screen bg-white">
-      <Header />
-
+    <main className="min-h-screen bg-white">
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 py-20">
         <div className="container mx-auto px-4">
@@ -162,14 +158,12 @@ const PublicSectorPage: FC = () => {
         </div>
       </section>
 
-      <Footer />
-
       {/* Sales Modal */}
       <SalesModal
         isOpen={isSalesModalOpen}
         onClose={() => setIsSalesModalOpen(false)}
       />
-    </div>
+    </main>
   );
 };
 

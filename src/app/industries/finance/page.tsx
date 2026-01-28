@@ -1,8 +1,8 @@
 "use client";
 
 import { FC, useState } from "react";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
+
+
 import DemoModal from "@/components/DemoModal";
 import {
   Shield,
@@ -17,8 +17,6 @@ const FinancePage: FC = () => {
   const [isDemoModalOpen, setIsDemoModalOpen] = useState(false);
   return (
     <div className="min-h-screen bg-white">
-      <Header />
-
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-green-50 via-emerald-50 to-teal-50 py-20">
         <div className="container mx-auto px-4">
@@ -167,9 +165,6 @@ const FinancePage: FC = () => {
           </button>
         </div>
       </section>
-
-      <Footer />
-
       {/* Demo Modal */}
       <DemoModal
         isOpen={isDemoModalOpen}

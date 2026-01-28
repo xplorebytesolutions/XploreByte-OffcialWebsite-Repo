@@ -1,7 +1,5 @@
 "use client";
 
-import Header from "../../components/Header";
-import Footer from "../../components/Footer";
 import {
   HelpCircle,
   BookOpen,
@@ -15,10 +13,7 @@ import {
 
 export default function SupportCenter() {
   return (
-    <>
-      <Header />
-
-      <main className="min-h-screen bg-white">
+    <main className="min-h-screen bg-white">
         {/* Hero Section */}
         <section className="bg-gradient-to-br from-[#0A0E23] via-[#202748] to-[#11A944]/40 py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -252,9 +247,6 @@ export default function SupportCenter() {
             </div>
           </div>
         </section>
-      </main>
-
-      <Footer />
-    </>
+    </main>
   );
 }

@@ -1,8 +1,6 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import Header from "../../../../components/Header";
-import Footer from "../../../../components/Footer";
 import Link from "next/link";
 import {
   ArrowRight,
@@ -77,8 +75,6 @@ export default function ApplyWhatsAppAPIPage() {
 
   return (
     <>
-      <Header />
-
       <main className="min-h-screen bg-white pt-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           {/* Breadcrumbs */}

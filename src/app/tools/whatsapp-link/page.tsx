@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
+
 import WhatsAppLinkGenerator from "@/pages/Tools/WhatsAppLinkGenerator";
 
 export const metadata: Metadata = {
@@ -13,7 +12,6 @@ export const metadata: Metadata = {
 export default function WhatsAppLinkGeneratorPage() {
   return (
     <>
-      <Header />
       <main className="bg-white">
         <WhatsAppLinkGenerator />
       </main>

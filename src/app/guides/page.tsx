@@ -1,7 +1,6 @@
 "use client";
 
-import Header from "../../components/Header";
-import Footer from "../../components/Footer";
+
 import {
   BookOpen,
   ArrowRight,
@@ -82,8 +81,6 @@ const guides = [
 export default function Guides() {
   return (
     <>
-      <Header />
-
       <main className="min-h-screen bg-white">
         {/* Hero Section */}
         <section className="bg-gradient-to-br from-[#0A0E23] via-[#202748] to-[#11A944]/40 py-20">
@@ -219,8 +216,6 @@ export default function Guides() {
           </div>
         </section>
       </main>
-
-      <Footer />
     </>
   );
 }

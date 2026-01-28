@@ -2,12 +2,10 @@
 
 import { useState } from "react";
 import NextLink from "next/link";
-import Header from "../components/Header";
 import Hero from "../components/Hero";
 import HeroFeatureStrip from "../components/HeroFeatureStrip";
 import IndustriesGrid from "../components/whatsappBusiness/IndustriesGrid";
 import WhyWhatsAppSection from "../components/WhyWhatsAppSection";
-import Footer from "../components/Footer";
 import StatsSection from "../components/StatsSection";
 import CTASection from "../components/CTASection";
 import SalesModal from "../components/SalesModal";
@@ -31,7 +29,6 @@ export default function Home() {
   return (
     <>
       <div className="h-screen flex flex-col relative overflow-hidden bg-white">
-        <Header />
         <div className="flex-1 flex flex-col justify-center">
           <Hero />
         </div>

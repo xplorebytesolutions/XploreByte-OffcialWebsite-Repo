@@ -1,8 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import Header from "../../../components/Header";
-import Footer from "../../../components/Footer";
+
+
 import DemoModal from "../../../components/DemoModal";
 import SalesModal from "../../../components/SalesModal";
 import {
@@ -39,8 +39,6 @@ export default function AIChatbotsFlows() {
 
   return (
     <>
-      <Header />
-
       <main className="min-h-screen bg-white">
         {/* Hero Section */}
         <section className="relative pt-32 pb-20 overflow-hidden bg-white">
@@ -58,9 +56,6 @@ export default function AIChatbotsFlows() {
                 variants={fadeIn}
                 className="max-w-2xl"
               >
-
-
-
                 <h1
                   className="font-extrabold text-gray-900 mb-6"
                   style={{
@@ -227,7 +222,9 @@ export default function AIChatbotsFlows() {
                   Turn Conversations Into Revenue
                 </h2>
                 <p className="text-lg text-gray-600 mb-8">
-                  Don't just chat - convert. XploreByte's flows are designed to guide users to the next best action, whether it's booking a demo, making a purchase, or resolving a support ticket.
+                  Don't just chat - convert. XploreByte's flows are designed to
+                  guide users to the next best action, whether it's booking a
+                  demo, making a purchase, or resolving a support ticket.
                 </p>
 
                 <div className="space-y-6">
@@ -344,9 +341,6 @@ export default function AIChatbotsFlows() {
           </div>
         </section>
       </main>
-
-      <Footer />
-
       {/* Modals */}
       <DemoModal
         isOpen={isDemoModalOpen}

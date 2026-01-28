@@ -1,8 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import Header from "../../../components/Header";
-import Footer from "../../../components/Footer";
+
+
 import DemoModal from "../../../components/DemoModal";
 import SalesModal from "../../../components/SalesModal";
 
@@ -11,7 +11,6 @@ export default function BeautyCosmeticsPage() {
   const [isSalesModalOpen, setIsSalesModalOpen] = useState(false);
   return (
     <>
-      <Header />
       <main className="pt-16">
         {/* Hero Section */}
         <section className="bg-gradient-to-br from-pink-50 to-purple-100 py-20">
