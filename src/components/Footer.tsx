@@ -69,14 +69,9 @@ const Footer = () => {
                 height={40}
                 className="h-10 w-auto"
               />
-              <div className="flex flex-col">
-                <span className="text-gray-200 text-xl font-bold tracking-tight">
-                  XploreByte
-                </span>
-                <span className="text-[10px] text-gray-500 font-medium tracking-widest uppercase mt-0.5">
-                  from XploreByte Solutions
-                </span>
-              </div>
+              <span className="text-gray-200 text-xl font-bold tracking-tight">
+                XploreByte
+              </span>
             </Link>
             <p className="max-w-md font-sans text-gray-300 text-sm leading-relaxed">
               XploreByte is a WhatsApp-first CRM built to help teams move faster
